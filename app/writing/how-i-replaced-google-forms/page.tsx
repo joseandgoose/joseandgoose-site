@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TLDRBadge from "@/app/components/TLDRBadge";
 
 export const metadata = {
   title: "How I Replaced Google Forms with a Custom Contact Form — Jose and Goose",
@@ -42,6 +43,7 @@ export default function HowIReplacedGoogleForms() {
             <span>~2 hours in one evening session (vs 8–10 hours for my first Supabase project)</span>
           </div>
         </div>
+        <TLDRBadge slug="how-i-replaced-google-forms" />
 
         {/* ── Ingredients ── */}
         <h2>Ingredients</h2>

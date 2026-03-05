@@ -8,6 +8,13 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "how-i-built-tldr",
+    title: "How I Added \"TL;DR by Goose\" AI Summaries to Every Post",
+    subtitle: "Using Claude Haiku to generate static summaries at publish time — and why the architecture decision matters more than the feature itself",
+    date: "March 5, 2026",
+    readTime: "5 min read",
+  },
+  {
     slug: "how-i-built-search",
     title: "How I Built a Self-Updating Search Bar Using Claude Code",
     subtitle: "From architecture decision to React portal — why a simple search bar required a codebase refactor, a build script, and fixing a CSS rule I didn't know existed",

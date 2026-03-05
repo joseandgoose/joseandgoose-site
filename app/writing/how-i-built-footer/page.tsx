@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TLDRBadge from "@/app/components/TLDRBadge";
 
 export const metadata = {
   title: "How I Built a Universal Footer Using Claude Code — Jose and Goose",
@@ -44,6 +45,7 @@ export default function HowIBuiltFooter() {
               <span>~25–30 minutes in a single session</span>
             </div>
           </div>
+          <TLDRBadge slug="how-i-built-footer" />
 
           {/* ── INGREDIENTS ── */}
           <h2>Ingredients</h2>

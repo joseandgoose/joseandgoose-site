@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TLDRBadge from "@/app/components/TLDRBadge";
 
 export const metadata = {
   title: "Gemini Grades the Website Build Difficulty — Jose and Goose",
@@ -26,6 +27,7 @@ export default function GeminiGrades() {
         {/* Title */}
         <h1 className="post-title">Gemini Grades the Website Build Difficulty</h1>
         <p className="post-subtitle">I asked Google&rsquo;s AI to evaluate how hard it actually was to build joseandgoose.com from scratch</p>
+        <TLDRBadge slug="gemini-grades" />
 
         {/* ── BODY ── */}
         <div className="post-body">

@@ -1608,7 +1608,67 @@ footer:not(.universal-footer) {
   font-weight: 300;
   color: var(--stone);
   line-height: 1.5;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
+}
+
+/* ── TL;DR Badge ── */
+.tldr-wrap {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.tldr-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--white);
+  border: 1.5px solid var(--rule);
+  border-radius: 999px;
+  padding: 6px 14px 6px 6px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.tldr-trigger:hover {
+  background: var(--forest-pale);
+  border-color: var(--forest);
+}
+.tldr-avatar {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.tldr-label {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest);
+}
+.tldr-chevron {
+  font-size: 0.8rem;
+  color: var(--forest);
+  transition: transform 0.2s;
+  display: inline-block;
+}
+.tldr-chevron-open {
+  transform: rotate(180deg);
+}
+.tldr-body {
+  margin-top: 10px;
+  background: var(--white);
+  border-left: 3px solid var(--forest);
+  border-radius: 4px;
+  padding: 14px 18px;
+}
+.tldr-text {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.65;
+  margin: 0;
 }
 
 /* ── Recipe meta block ── */
@@ -1616,7 +1676,7 @@ footer:not(.universal-footer) {
   background: var(--forest-pale);
   border-radius: 4px;
   padding: 24px 28px;
-  margin-bottom: 48px;
+  margin-bottom: 16px;
 }
 
 .post-recipe-row {
@@ -1647,7 +1707,7 @@ footer:not(.universal-footer) {
   font-size: 1.65rem;
   font-weight: 400;
   color: var(--ink);
-  margin-top: 56px;
+  margin-top: 42px;
   margin-bottom: 20px;
   line-height: 1.25;
 }

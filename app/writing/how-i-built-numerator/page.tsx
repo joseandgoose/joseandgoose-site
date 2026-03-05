@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TLDRBadge from "@/app/components/TLDRBadge";
 
 export const metadata = {
   title: "How I Built Numerator — Jose and Goose",
@@ -42,6 +43,7 @@ export default function HowIBuiltNumerator() {
             <span>~8–10 hours across 4 sessions over 2 days</span>
           </div>
         </div>
+        <TLDRBadge slug="how-i-built-numerator" />
 
         {/* ── Ingredients ── */}
         <h2>Ingredients</h2>

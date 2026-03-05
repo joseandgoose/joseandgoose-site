@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TLDRBadge from "@/app/components/TLDRBadge";
 
 export const metadata = {
   title: "How I Automated Daily Garmin Recaps to My Inbox — Jose and Goose",
@@ -40,6 +41,7 @@ export default function HowIAutomatedGarminRecaps() {
             <span>~2 hours initial build (Feb 26) + 45 minutes debugging & email setup (Feb 28)</span>
           </div>
         </div>
+        <TLDRBadge slug="how-i-automated-garmin-recaps" />
 
         {/* ── Ingredients ── */}
         <h2>Ingredients</h2>

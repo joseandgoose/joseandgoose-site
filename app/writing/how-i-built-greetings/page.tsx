@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TLDRBadge from "@/app/components/TLDRBadge";
 
 export const metadata = {
   title: "How I Built 50+ Dynamic Greetings Using Claude Code — Jose and Goose",
@@ -44,6 +45,7 @@ export default function HowIBuiltGreetings() {
               <span>~45 minutes of coding, ~90 minutes of copy iteration</span>
             </div>
           </div>
+          <TLDRBadge slug="how-i-built-greetings" />
 
           {/* ── INGREDIENTS ── */}
           <h2>Ingredients</h2>

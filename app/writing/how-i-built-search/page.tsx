@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TLDRBadge from "@/app/components/TLDRBadge";
 
 export const metadata = {
   title: "How I Built a Self-Updating Search Bar — Jose and Goose",
@@ -48,6 +49,7 @@ export default function HowIBuiltSearch() {
             <span>~3 hours across 4 feedback sessions in one evening</span>
           </div>
         </div>
+        <TLDRBadge slug="how-i-built-search" />
 
         {/* ── Ingredients ── */}
         <h2>Ingredients</h2>
