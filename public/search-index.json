@@ -1,0 +1,100 @@
+[
+  {
+    "type": "page",
+    "title": "Home",
+    "url": "/",
+    "description": "Jose and Goose — personal site of Jose Delgado and his Miniature Schnauzer."
+  },
+  {
+    "type": "page",
+    "title": "About",
+    "url": "/about",
+    "description": "Jose — product manager at Pet Space. Goose — Miniature Schnauzer from Texas, Brooklyn, and LA."
+  },
+  {
+    "type": "page",
+    "title": "Work",
+    "url": "/work",
+    "description": "Career history: Pet Space, DoorDash, Instacart, Goldman Sachs, Teach for America."
+  },
+  {
+    "type": "page",
+    "title": "Writing",
+    "url": "/writing",
+    "description": "Ideas at the intersection of product, strategy, and building things."
+  },
+  {
+    "type": "page",
+    "title": "Contact",
+    "url": "/contact",
+    "description": "Get in touch — consulting, project recommendations, or book time to chat."
+  },
+  {
+    "type": "feature",
+    "title": "Numerator",
+    "url": "/numerator",
+    "description": "A number guessing game. How fast can you find the secret number?"
+  },
+  {
+    "type": "feature",
+    "title": "Fruit Exchange",
+    "url": "/fruit-exchange",
+    "description": "Community map for sharing fruit from backyard trees in your neighborhood."
+  },
+  {
+    "type": "post",
+    "title": "How I Built a Self-Updating Search Bar Using Claude Code",
+    "url": "/writing/how-i-built-search",
+    "description": "From architecture decision to React portal — why a simple search bar required a codebase refactor, a build script, and fixing a CSS rule I didn't know existed",
+    "date": "March 3, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Automated Daily Garmin Recaps to My Inbox",
+    "url": "/writing/how-i-automated-garmin-recaps",
+    "description": "Building a Mac automation that fetches Garmin health data at 7am, generates AI recaps with Claude CLI, and emails them — built across two sessions",
+    "date": "February 28, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Replaced Google Forms with a Custom Contact Form Using Claude Code",
+    "url": "/writing/how-i-replaced-google-forms",
+    "description": "Building a Supabase-backed contact form with email notifications in 2 hours — 4x faster than my first database project",
+    "date": "February 28, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Built 50+ Dynamic Greetings Using Claude Code",
+    "url": "/writing/how-i-built-greetings",
+    "description": "Replacing 8 static words with time-aware messages — and learning why iteration beats perfection",
+    "date": "February 27, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Built a Universal Footer Using Claude Code",
+    "url": "/writing/how-i-built-footer",
+    "description": "Designing and deploying a production-ready footer component in under 30 minutes with terminal-based AI",
+    "date": "February 27, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Built Numerator Using Claude",
+    "url": "/writing/how-i-built-numerator",
+    "description": "A non-developer builds a full-stack web game from concept to deployment in four sessions",
+    "date": "February 19, 2026"
+  },
+  {
+    "type": "post",
+    "title": "Gemini Grades the Website Build Difficulty",
+    "url": "/writing/gemini-grades",
+    "description": "Google’s AI evaluates how hard it actually was to build joseandgoose.com from scratch",
+    "date": "February 17, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Built JoseAndGoose.com Using Claude",
+    "url": "/writing/how-i-built-this",
+    "description": "A non-developer builds a website from scratch with AI in three sessions",
+    "date": "February 17, 2026"
+  }
+]
