@@ -43,6 +43,69 @@
   },
   {
     "type": "post",
+    "title": "How I Built a Personal API Server to Control Everything Remotely",
+    "url": "/writing/how-i-built-api-server",
+    "description": "An Express API on the Alienware that lets me trigger jobs, check system health, and pull reports — secured with API key auth, systemd, and port knocking",
+    "date": "March 30, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Built a Cron-Powered Operations Layer on a Home Linux Server",
+    "url": "/writing/how-i-built-cron-ops",
+    "description": "What started as three cron jobs grew into 100+ lines of scheduled automation — market briefings, game bots, security audits, AI job queues, and weekly reports, all orchestrated by a single crontab",
+    "date": "March 25, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Automated My Soccer Club with a Bot",
+    "url": "/writing/how-i-automated-trophymanager",
+    "description": "A Python bot on a headless Linux server that manages a TrophyManager.com soccer club — scouting, bidding, lineup setting, training, and self-grading, all automated",
+    "date": "March 21, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Built a Market Briefing That Writes and Sends Itself Every Morning",
+    "url": "/writing/how-i-built-market-daily",
+    "description": "A Python script on a headless Linux server scrapes market data, asks Claude to explain why markets moved, and delivers it to subscribers via Resend — every weekday at 8am",
+    "date": "March 17, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Built Fruit Exchange, a Neighborhood Fruit Tree Map",
+    "url": "/writing/how-i-built-fruit-exchange",
+    "description": "A map-based community tool where neighbors list backyard fruit trees and others can find them — styled like a 90s farming game, verified with email, and built with Claude Code",
+    "date": "March 12, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Built a Full Status Alert System",
+    "url": "/writing/how-i-built-server-alerts",
+    "description": "Website uptime, Supabase health, API monitoring, Fail2ban reports, Claude-generated changelog, and a weekly summary — all automated from a headless Alienware",
+    "date": "March 8, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Secured the Home Linux Server",
+    "url": "/writing/how-i-secured-linux-server",
+    "description": "Layered security for an always-on home machine — UFW firewall, Fail2ban brute-force protection, SSH key-only auth, port knocking for remote access, and instant login alerts",
+    "date": "March 7, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Turned an Old Laptop Into a Headless Linux Server",
+    "url": "/writing/how-i-setup-headless-linux",
+    "description": "Repurposing a 2011 gaming laptop into an always-on home server running Linux Mint — closed lid, no monitor, SSH access from anywhere",
+    "date": "March 6, 2026"
+  },
+  {
+    "type": "post",
+    "title": "How I Added \"TL;DR by Goose\" AI Summaries to Every Post",
+    "url": "/writing/how-i-built-tldr",
+    "description": "Using Claude Haiku to generate static summaries at publish time — and why the architecture decision matters more than the feature itself",
+    "date": "March 5, 2026"
+  },
+  {
+    "type": "post",
     "title": "How I Built a Self-Updating Search Bar Using Claude Code",
     "url": "/writing/how-i-built-search",
     "description": "From architecture decision to React portal — why a simple search bar required a codebase refactor, a build script, and fixing a CSS rule I didn't know existed",

@@ -4,15 +4,81 @@ export type Post = {
   subtitle: string;
   date: string;
   readTime: string;
+  tags: string[];
 };
 
 export const posts: Post[] = [
+  {
+    slug: "how-i-built-api-server",
+    title: "How I Built a Personal API Server to Control Everything Remotely",
+    subtitle: "An Express API on the Alienware that lets me trigger jobs, check system health, and pull reports — secured with API key auth, systemd, and port knocking",
+    date: "March 30, 2026",
+    readTime: "8 min read",
+    tags: ["Headless Linux"],
+  },
+  {
+    slug: "how-i-built-cron-ops",
+    title: "How I Built a Cron-Powered Operations Layer on a Home Linux Server",
+    subtitle: "What started as three cron jobs grew into 100+ lines of scheduled automation — market briefings, game bots, security audits, AI job queues, and weekly reports, all orchestrated by a single crontab",
+    date: "March 25, 2026",
+    readTime: "9 min read",
+    tags: ["Headless Linux", "Automation"],
+  },
+  {
+    slug: "how-i-automated-trophymanager",
+    title: "How I Automated My Soccer Club with a Bot",
+    subtitle: "A Python bot on a headless Linux server that manages a TrophyManager.com soccer club — scouting, bidding, lineup setting, training, and self-grading, all automated",
+    date: "March 21, 2026",
+    readTime: "10 min read",
+    tags: ["Automation", "Headless Linux"],
+  },
+  {
+    slug: "how-i-built-market-daily",
+    title: "How I Built a Market Briefing That Writes and Sends Itself Every Morning",
+    subtitle: "A Python script on a headless Linux server scrapes market data, asks Claude to explain why markets moved, and delivers it to subscribers via Resend — every weekday at 8am",
+    date: "March 17, 2026",
+    readTime: "9 min read",
+    tags: ["Automation", "Headless Linux"],
+  },
+  {
+    slug: "how-i-built-fruit-exchange",
+    title: "How I Built Fruit Exchange, a Neighborhood Fruit Tree Map",
+    subtitle: "A map-based community tool where neighbors list backyard fruit trees and others can find them — styled like a 90s farming game, verified with email, and built with Claude Code",
+    date: "March 12, 2026",
+    readTime: "8 min read",
+    tags: ["Website", "Features"],
+  },
+  {
+    slug: "how-i-built-server-alerts",
+    title: "How I Built a Full Status Alert System",
+    subtitle: "Website uptime, Supabase health, API monitoring, Fail2ban reports, Claude-generated changelog, and a weekly summary — all automated from a headless Alienware",
+    date: "March 8, 2026",
+    readTime: "10 min read",
+    tags: ["Headless Linux", "Automation"],
+  },
+  {
+    slug: "how-i-secured-linux-server",
+    title: "How I Secured the Home Linux Server",
+    subtitle: "Layered security for an always-on home machine — UFW firewall, Fail2ban brute-force protection, SSH key-only auth, port knocking for remote access, and instant login alerts",
+    date: "March 7, 2026",
+    readTime: "9 min read",
+    tags: ["Headless Linux"],
+  },
+  {
+    slug: "how-i-setup-headless-linux",
+    title: "How I Turned an Old Laptop Into a Headless Linux Server",
+    subtitle: "Repurposing a 2011 gaming laptop into an always-on home server running Linux Mint — closed lid, no monitor, SSH access from anywhere",
+    date: "March 6, 2026",
+    readTime: "8 min read",
+    tags: ["Headless Linux"],
+  },
   {
     slug: "how-i-built-tldr",
     title: "How I Added \"TL;DR by Goose\" AI Summaries to Every Post",
     subtitle: "Using Claude Haiku to generate static summaries at publish time — and why the architecture decision matters more than the feature itself",
     date: "March 5, 2026",
     readTime: "5 min read",
+    tags: ["Website", "Features"],
   },
   {
     slug: "how-i-built-search",
@@ -20,6 +86,7 @@ export const posts: Post[] = [
     subtitle: "From architecture decision to React portal — why a simple search bar required a codebase refactor, a build script, and fixing a CSS rule I didn't know existed",
     date: "March 3, 2026",
     readTime: "8 min read",
+    tags: ["Website", "Features"],
   },
   {
     slug: "how-i-automated-garmin-recaps",
@@ -27,6 +94,7 @@ export const posts: Post[] = [
     subtitle: "Building a Mac automation that fetches Garmin health data at 7am, generates AI recaps with Claude CLI, and emails them — built across two sessions",
     date: "February 28, 2026",
     readTime: "9 min read",
+    tags: ["Automation"],
   },
   {
     slug: "how-i-replaced-google-forms",
@@ -34,6 +102,7 @@ export const posts: Post[] = [
     subtitle: "Building a Supabase-backed contact form with email notifications in 2 hours — 4x faster than my first database project",
     date: "February 28, 2026",
     readTime: "7 min read",
+    tags: ["Website", "Features"],
   },
   {
     slug: "how-i-built-greetings",
@@ -41,6 +110,7 @@ export const posts: Post[] = [
     subtitle: "Replacing 8 static words with time-aware messages — and learning why iteration beats perfection",
     date: "February 27, 2026",
     readTime: "6 min read",
+    tags: ["Website", "Features"],
   },
   {
     slug: "how-i-built-footer",
@@ -48,6 +118,7 @@ export const posts: Post[] = [
     subtitle: "Designing and deploying a production-ready footer component in under 30 minutes with terminal-based AI",
     date: "February 27, 2026",
     readTime: "5 min read",
+    tags: ["Website", "Features"],
   },
   {
     slug: "how-i-built-numerator",
@@ -55,6 +126,7 @@ export const posts: Post[] = [
     subtitle: "A non-developer builds a full-stack web game from concept to deployment in four sessions",
     date: "February 19, 2026",
     readTime: "8 min read",
+    tags: ["Games", "Website"],
   },
   {
     slug: "gemini-grades",
@@ -62,6 +134,7 @@ export const posts: Post[] = [
     subtitle: "Google\u2019s AI evaluates how hard it actually was to build joseandgoose.com from scratch",
     date: "February 17, 2026",
     readTime: "4 min read",
+    tags: ["Website"],
   },
   {
     slug: "how-i-built-this",
@@ -69,5 +142,6 @@ export const posts: Post[] = [
     subtitle: "A non-developer builds a website from scratch with AI in three sessions",
     date: "February 17, 2026",
     readTime: "6 min read",
+    tags: ["Website"],
   },
 ];
