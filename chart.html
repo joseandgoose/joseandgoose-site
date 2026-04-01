@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>joseandgoose.com — Site Architecture</title>
+<style>
+:root {
+  --bg:          #0f1117;
+  --surface-1:   #141b26;
+  --surface-2:   #1e293b;
+  --surface-3:   #263548;
+  --border-1:    #1e293b;
+  --border-2:    #334155;
+  --text-primary:   #f1f5f9;
+  --text-secondary: #e2e8f0;
+  --text-muted:     #94a3b8;
+  --text-dim:       #64748b;
+  --text-faint:     #475569;
+  --green:   #4ade80;
+  --green-bg: #14532d;
+  --yellow:  #fbbf24;
+  --yellow-bg: #1a1700;
+  --yellow-border: #854d0e;
+  --red:     #f87171;
+  --purple:  #c084fc;
+  --blue-bg: #1e3a5f;
+  --blue-text: #93c5fd;
+  --radius-lg: 8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text-secondary); padding: 32px; max-width: 1000px; margin: 0 auto; }
+h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; color: var(--text-primary); }
+.subtitle { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 32px; }
+h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 32px; }
+.summary-box { background: var(--surface-2); border: 1px solid var(--border-1); border-radius: var(--radius-lg); padding: 14px; text-align: center; }
+.summary-box .val { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+.summary-box .lbl { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+
+.notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+.note-card { background: var(--surface-2); border: 1px solid #1e3a5f22; border-radius: var(--radius-lg); padding: 13px 15px; font-size: 0.76rem; color: var(--text-muted); line-height: 1.55; }
+.note-card-title { font-size: 0.72rem; font-weight: 700; color: #cbd5e1; margin-bottom: 7px; }
+.note-tag { display: inline-block; font-size: 0.6rem; padding: 1px 6px; border-radius: 3px; margin-left: 6px; font-weight: 600; vertical-align: middle; }
+.note-tag-feat { background: var(--green-bg); color: var(--green); }
+.note-tag-content { background: var(--blue-bg); color: var(--blue-text); }
+.note-tag-arch { background: #3b0764; color: #d8b4fe; }
+
+.page-list { list-style: none; padding: 0; }
+.page-list li { padding: 8px 12px; border-bottom: 1px solid var(--border-1); font-size: 0.8rem; display: flex; justify-content: space-between; }
+.page-list li:last-child { border-bottom: none; }
+.page-list .path { color: var(--text-muted); font-family: monospace; font-size: 0.72rem; }
+.page-list .tag { font-size: 0.65rem; padding: 2px 8px; border-radius: 3px; background: var(--surface-3); color: var(--text-dim); }
+
+@media (max-width: 600px) { .notes-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<h1>joseandgoose.com</h1>
+<div class="subtitle">Personal site — Next.js 16 + TypeScript + Tailwind CSS 4 — deployed on Vercel — v1.0.0 — 2026-03-31</div>
+
+<div class="summary-grid">
+  <div class="summary-box"><div class="val">17</div><div class="lbl">Writing Posts</div></div>
+  <div class="summary-box"><div class="val">3</div><div class="lbl">Features</div></div>
+  <div class="summary-box"><div class="val">10</div><div class="lbl">API Routes</div></div>
+  <div class="summary-box"><div class="val">v1.0.0</div><div class="lbl">Version</div></div>
+</div>
+
+<h2>Pages &amp; Features</h2>
+<ul class="page-list">
+  <li><span>/</span> <span class="tag">homepage</span></li>
+  <li><span>/writing</span> <span class="tag">17 posts</span></li>
+  <li><span>/about</span> <span class="tag">static</span></li>
+  <li><span>/contact</span> <span class="tag">Supabase</span></li>
+  <li><span>/numerator</span> <span class="tag">game · Supabase</span></li>
+  <li><span>/fruit-exchange</span> <span class="tag">Leaflet · Supabase · Resend</span></li>
+  <li><span>/work-and-projects</span> <span class="tag">static</span></li>
+  <li><span>/subscribe · /unsubscribe</span> <span class="tag">market daily · Supabase</span></li>
+</ul>
+
+<h2>v1.0.0 Session Notes — 2026-03-31</h2>
+<div class="notes-grid">
+  <div class="note-card">
+    <div class="note-card-title">5 new writing posts added <span class="note-tag note-tag-content">content</span></div>
+    Fruit Exchange (Mar 12), Market Daily (Mar 17), TrophyManager Bot (Mar 21), Cron Ops (Mar 25), API Server (Mar 30). Covers projects built on the Alienware server and site features not previously documented.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Retrospective format introduced <span class="note-tag note-tag-arch">arch</span></div>
+    Earlier posts followed session-by-session diary format. New posts use a retrospective style for projects spanning weeks. Format note added to the Fruit Exchange article (first new post) to acknowledge the shift.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Security scrub across all new articles <span class="note-tag note-tag-arch">arch</span></div>
+    Removed: server IPs, ports, subnets, home directory username, API key file paths, systemd service names, SSH port confirmation, TM cookie names, TM AJAX endpoint filenames. All replaced with generic references.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Voice consistency pass <span class="note-tag note-tag-content">content</span></div>
+    Added Goose mentions to all 5 articles. Added plain-language glossing for technical terms (SSR, cron, PATH, OAuth, AJAX, systemd, Playwright, SQLite, RSS, DKIM/SPF, Express, journald). Brings new posts closer to the non-developer explanatory tone of earlier articles.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">TrophyManager article: phantom automation section <span class="note-tag note-tag-content">content</span></div>
+    Added detailed section about AI overconfidence — Claude confidently wrote modules that ran without errors but never actually triggered game actions because endpoints were mapped wrong. Two weeks of "automated" actions that never fired. Key lesson for the writing series.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">API Server article: series context added <span class="note-tag note-tag-content">content</span></div>
+    New "Where This Fits" section links to the 3 earlier Alienware posts (setup → security → alerts) and frames this as the fourth: making the server controllable, not just observable. Differentiates from overlapping topics.
+  </div>
+</div>
+
+<h2>Stack</h2>
+<div class="notes-grid">
+  <div class="note-card">
+    <div class="note-card-title">Framework <span class="note-tag note-tag-feat">stack</span></div>
+    Next.js 16.1.6, TypeScript, Tailwind CSS 4. Deployed on Vercel via CLI (not GitHub auto-deploy). Local git history is authoritative — never pull from remote.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Database <span class="note-tag note-tag-feat">stack</span></div>
+    Supabase free tier. Tables: contacts, numerator_rounds, fruit_listings, fruit_requests, fruit_exchanges, email_verifications, market_subscribers. No migration planned — Supabase covers current needs.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Email <span class="note-tag note-tag-feat">stack</span></div>
+    Resend (free tier, 3k/month). Domain verified for joseandgoose.com. Used by: contact form notifications, Fruit Exchange owner verification, market daily subscriber management.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Writing pipeline <span class="note-tag note-tag-feat">stack</span></div>
+    Posts defined in app/lib/posts.ts. TL;DR summaries generated by scripts/generate-tldr.ts (Claude Haiku, build-time). Search index generated by scripts/generate-search-index.ts (prebuild). Each post is a standalone page.tsx.
+  </div>
+</div>
+
+</body>
+</html>
