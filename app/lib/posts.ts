@@ -9,6 +9,14 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "how-i-upgraded-search-to-vectors",
+    title: "How I Upgraded Search to Semantic Vector Embeddings",
+    subtitle: "From keyword matching to meaning-based search using pgvector, Supabase, and Hugging Face — and why it's the foundation for Ask Goose",
+    date: "April 4, 2026",
+    readTime: "4 min read",
+    tags: ["Website", "Features"],
+  },
+  {
     slug: "how-i-built-api-server",
     title: "How I Built a Personal API Server to Control Everything Remotely",
     subtitle: "An Express API on the Alienware that lets me trigger jobs, check system health, and pull reports — secured with API key auth, systemd, and port knocking",

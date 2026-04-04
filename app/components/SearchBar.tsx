@@ -59,10 +59,12 @@ export default function SearchBar({ open: openProp, onOpen, onClose }: Props) {
   const [index, setIndex] = useState<SearchEntry[] | null>(null);
   const [results, setResults] = useState<SearchEntry[]>([]);
   const [active, setActive] = useState(-1);
+  const [vectorLoading, setVectorLoading] = useState(false);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const vectorRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const router = useRouter();
 
   // Load index once on first open
@@ -79,9 +81,12 @@ export default function SearchBar({ open: openProp, onOpen, onClose }: Props) {
     if (open) inputRef.current?.focus();
   }, [open]);
 
-  // Debounced search
+  // Debounced search: keyword first, vector fallback if 0 results
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
+    if (vectorRef.current) clearTimeout(vectorRef.current);
+    setVectorLoading(false);
+
     debounceRef.current = setTimeout(() => {
       if (!query.trim() || !index) {
         setResults([]);
@@ -96,11 +101,40 @@ export default function SearchBar({ open: openProp, onOpen, onClose }: Props) {
             e.description.toLowerCase().includes(q)
         )
         .slice(0, 6);
-      setResults(matches);
+
+      if (matches.length > 0) {
+        setResults(matches);
+        setActive(-1);
+        return;
+      }
+
+      // No keyword matches — try vector search after a short extra delay
+      setResults([]);
       setActive(-1);
+      setVectorLoading(true);
+      vectorRef.current = setTimeout(() => {
+        fetch(`/api/search?q=${encodeURIComponent(query.trim())}`)
+          .then((r) => r.json())
+          .then((data) => {
+            const vectorResults: SearchEntry[] = (data.results || []).map(
+              (r: { content_type: string; title: string; url: string; description: string }) => ({
+                type: r.content_type as SearchEntry["type"],
+                title: r.title,
+                url: r.url,
+                description: r.description,
+              })
+            );
+            setResults(vectorResults);
+            setActive(-1);
+          })
+          .catch(() => setResults([]))
+          .finally(() => setVectorLoading(false));
+      }, 100);
     }, 200);
+
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
+      if (vectorRef.current) clearTimeout(vectorRef.current);
     };
   }, [query, index]);
 
@@ -304,7 +338,7 @@ export default function SearchBar({ open: openProp, onOpen, onClose }: Props) {
             </ul>
           )}
 
-          {/* No results */}
+          {/* Loading / no results */}
           {query.trim() && results.length === 0 && index !== null && (
             <p
               style={{
@@ -315,7 +349,9 @@ export default function SearchBar({ open: openProp, onOpen, onClose }: Props) {
                 margin: 0,
               }}
             >
-              No results for &ldquo;{query}&rdquo;
+              {vectorLoading
+                ? "Searching..."
+                : <>No results for &ldquo;{query}&rdquo;</>}
             </p>
           )}
         </div>

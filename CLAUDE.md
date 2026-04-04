@@ -8,6 +8,12 @@ Personal website at joseandgoose.com built with Next.js 16, TypeScript, and Tail
 - Run `/wrap` at the end of every session to update CHANGELOG.md, commit, and push
 - Always test locally with `npm run dev` at localhost:3000 before deploying
 
+## Adding Content
+When adding a new post or page:
+1. Add entry to `app/lib/posts.ts`
+2. Run `npx tsx scripts/generate-tldr.ts <slug>` for the AI summary
+3. Run `npx tsx scripts/generate-embeddings.ts` to update vector search embeddings
+
 ## Deployment
 - Hosted on Vercel — deploy with `vercel` CLI from this folder
 - Do NOT use `git pull` — remote is a starter/archive, local history is authoritative

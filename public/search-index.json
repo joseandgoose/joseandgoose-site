@@ -43,6 +43,13 @@
   },
   {
     "type": "post",
+    "title": "How I Upgraded Search to Semantic Vector Embeddings",
+    "url": "/writing/how-i-upgraded-search-to-vectors",
+    "description": "From keyword matching to meaning-based search using pgvector, Supabase, and Hugging Face — and why it's the foundation for Ask Goose",
+    "date": "April 4, 2026"
+  },
+  {
+    "type": "post",
     "title": "How I Built a Personal API Server to Control Everything Remotely",
     "url": "/writing/how-i-built-api-server",
     "description": "An Express API on the Alienware that lets me trigger jobs, check system health, and pull reports — secured with API key auth, systemd, and port knocking",
