@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Built a Market Briefing That Writes and Sends Itself Every Morning — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIBuiltMarketDaily() {
         <span className="post-meta-dot">·</span>
         <span>9 min read</span>
       </div>
+      <PostTags slug="how-i-built-market-daily" />
 
       <h1 className="post-title">How I Built a Market Briefing That Writes and Sends Itself Every Morning</h1>
       <p className="post-subtitle">
@@ -278,6 +281,7 @@ export default function HowIBuiltMarketDaily() {
           open my email, and the market brief is already there. No tabs to open, no apps to check,
           no 15 minutes of skimming. One email, one thesis, done.
         </p>
+      <RelatedPosts slug="how-i-built-market-daily" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>

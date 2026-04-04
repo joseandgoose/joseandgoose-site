@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Built Fruit Exchange, a Neighborhood Fruit Tree Map — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIBuiltFruitExchange() {
         <span className="post-meta-dot">·</span>
         <span>8 min read</span>
       </div>
+      <PostTags slug="how-i-built-fruit-exchange" />
 
       <h1 className="post-title">How I Built Fruit Exchange, a Neighborhood Fruit Tree Map</h1>
       <p className="post-subtitle">
@@ -291,6 +294,7 @@ export default function HowIBuiltFruitExchange() {
           anyone uses it at scale doesn&rsquo;t matter yet. The fact that it works and it&rsquo;s live
           means the idea is testable, and that&rsquo;s the point.
         </p>
+      <RelatedPosts slug="how-i-built-fruit-exchange" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>

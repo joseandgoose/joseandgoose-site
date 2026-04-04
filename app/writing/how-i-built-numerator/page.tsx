@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Built Numerator — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIBuiltNumerator() {
         <span className="post-meta-dot">·</span>
         <span>8 min read</span>
       </div>
+      <PostTags slug="how-i-built-numerator" />
 
       <h1 className="post-title">How I Built Numerator Using Claude</h1>
       <p className="post-subtitle">
@@ -435,6 +438,7 @@ export default function HowIBuiltNumerator() {
           CSS responsive design. <strong>Claude</strong> handled the code. I handled the decisions.
           And the correct answer is still 50% of whatever everyone else is thinking.
         </p>
+      <RelatedPosts slug="how-i-built-numerator" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>

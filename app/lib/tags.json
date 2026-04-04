@@ -1,0 +1,176 @@
+{
+  "how-i-upgraded-search-to-vectors": {
+    "tags": [
+      "Backend",
+      "AI Tools",
+      "Data"
+    ],
+    "readingTime": "4 min read",
+    "wordCount": 1021
+  },
+  "how-i-built-api-server": {
+    "tags": [
+      "Backend",
+      "API Design",
+      "Linux",
+      "Security",
+      "DevOps"
+    ],
+    "readingTime": "6 min read",
+    "wordCount": 1485
+  },
+  "how-i-built-cron-ops": {
+    "tags": [
+      "Linux",
+      "Automation",
+      "DevOps"
+    ],
+    "readingTime": "8 min read",
+    "wordCount": 1765
+  },
+  "how-i-automated-trophymanager": {
+    "tags": [
+      "Automation",
+      "Backend",
+      "Linux"
+    ],
+    "readingTime": "9 min read",
+    "wordCount": 1972
+  },
+  "how-i-built-fruit-exchange": {
+    "tags": [
+      "Frontend",
+      "Product Thinking",
+      "AI Tools"
+    ],
+    "readingTime": "7 min read",
+    "wordCount": 1587
+  },
+  "how-i-built-server-alerts": {
+    "tags": [
+      "Automation",
+      "DevOps",
+      "Linux"
+    ],
+    "readingTime": "9 min read",
+    "wordCount": 2092
+  },
+  "how-i-secured-linux-server": {
+    "tags": [
+      "Linux",
+      "Security",
+      "DevOps"
+    ],
+    "readingTime": "7 min read",
+    "wordCount": 1721
+  },
+  "how-i-setup-headless-linux": {
+    "tags": [
+      "Linux",
+      "Automation",
+      "DevOps"
+    ],
+    "readingTime": "7 min read",
+    "wordCount": 1651
+  },
+  "how-i-built-search": {
+    "tags": [
+      "Frontend",
+      "Automation",
+      "Product Thinking"
+    ],
+    "readingTime": "9 min read",
+    "wordCount": 2176
+  },
+  "how-i-replaced-google-forms": {
+    "tags": [
+      "AI Tools",
+      "Frontend",
+      "Backend"
+    ],
+    "readingTime": "7 min read",
+    "wordCount": 1652
+  },
+  "how-i-built-footer": {
+    "tags": [
+      "AI Tools",
+      "Frontend",
+      "Product Thinking"
+    ],
+    "readingTime": "6 min read",
+    "wordCount": 1385
+  },
+  "how-i-built-numerator": {
+    "tags": [
+      "AI Tools",
+      "Frontend",
+      "Game Dev"
+    ],
+    "readingTime": "9 min read",
+    "wordCount": 2140
+  },
+  "how-i-built-market-daily": {
+    "tags": [
+      "AI Tools",
+      "Automation",
+      "Backend",
+      "Linux"
+    ],
+    "readingTime": "7 min read",
+    "wordCount": 1609
+  },
+  "how-i-built-tldr": {
+    "tags": [
+      "AI Tools",
+      "Frontend",
+      "Product Thinking"
+    ],
+    "readingTime": "5 min read",
+    "wordCount": 1090
+  },
+  "how-i-automated-garmin-recaps": {
+    "tags": [
+      "Automation",
+      "AI Tools",
+      "Backend"
+    ],
+    "readingTime": "9 min read",
+    "wordCount": 2027
+  },
+  "how-i-built-greetings": {
+    "tags": [
+      "AI Tools",
+      "Frontend",
+      "Product Thinking"
+    ],
+    "readingTime": "7 min read",
+    "wordCount": 1596
+  },
+  "gemini-grades": {
+    "tags": [
+      "AI Tools",
+      "Frontend",
+      "DevOps"
+    ],
+    "readingTime": "3 min read",
+    "wordCount": 583
+  },
+  "how-i-built-this": {
+    "tags": [
+      "AI Tools",
+      "Frontend",
+      "Automation"
+    ],
+    "readingTime": "8 min read",
+    "wordCount": 1804
+  },
+  "how-i-built-content-pipeline": {
+    "tags": [
+      "AI Tools",
+      "Automation",
+      "Frontend"
+    ],
+    "readingTime": "6 min read",
+    "wordCount": 1315
+  }
+}

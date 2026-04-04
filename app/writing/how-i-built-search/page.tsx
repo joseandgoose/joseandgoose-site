@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Built a Self-Updating Search Bar — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIBuiltSearch() {
         <span className="post-meta-dot">·</span>
         <span>8 min read</span>
       </div>
+      <PostTags slug="how-i-built-search" />
 
       <h1 className="post-title">How I Built a Self-Updating Search Bar Using Claude Code</h1>
       <p className="post-subtitle">
@@ -445,6 +448,7 @@ export default function HowIBuiltSearch() {
           just &ldquo;what works now?&rdquo; — it&rsquo;s &ldquo;what will I still trust in six
           months?&rdquo; The build script is what I&rsquo;ll still trust.
         </p>
+      <RelatedPosts slug="how-i-built-search" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>

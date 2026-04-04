@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Built a Personal API Server to Control Everything Remotely — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIBuiltAPIServer() {
         <span className="post-meta-dot">·</span>
         <span>8 min read</span>
       </div>
+      <PostTags slug="how-i-built-api-server" />
 
       <h1 className="post-title">How I Built a Personal API Server to Control Everything Remotely</h1>
       <p className="post-subtitle">
@@ -300,6 +303,7 @@ export default function HowIBuiltAPIServer() {
           I send an HTTP request from the couch while Goose takes up the other half of it. The
           server went from something I log into to something I talk to.
         </p>
+      <RelatedPosts slug="how-i-built-api-server" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>

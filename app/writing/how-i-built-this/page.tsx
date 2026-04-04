@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Built JoseAndGoose.com Using Claude — Jose and Goose",
@@ -23,6 +25,7 @@ export default function HowIBuiltThis() {
           <span className="post-meta-dot">·</span>
           <span>6 min read</span>
         </div>
+      <PostTags slug="how-i-built-this" />
 
         {/* Title */}
         <h1 className="post-title">How I Built JoseAndGoose.com Using Claude</h1>
@@ -320,6 +323,7 @@ export default function HowIBuiltThis() {
         </div>
 
         {/* Back link bottom */}
+      <RelatedPosts slug="how-i-built-this" />
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>
         </div>

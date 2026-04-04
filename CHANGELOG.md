@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.2.0 — 2026-04-04
+
+### Added
+- AI tag generation script (scripts/generate-tags.ts) — Claude Haiku classifies posts into 11-tag taxonomy
+- Related posts script (scripts/generate-related.ts) — cosine similarity on Supabase vector embeddings
+- PostTags component — tag pills displayed on individual post pages
+- RelatedPosts component — 2 related post cards at bottom of each post page
+- Static data files: app/lib/tags.json, app/lib/related.json
+- New writing post: "How I Built an AI Content Pipeline for Every Writing Post"
+
+### Changed
+- posts.ts tags replaced with AI-generated taxonomy (AI Tools, Backend, Frontend, Automation, Product Thinking, Game Dev, Data, DevOps, Security, API Design, Linux)
+- Reading times verified and updated via word count (230 wpm)
+- WritingFilter derives ALL_TAGS dynamically from posts array (was hardcoded 5 tags)
+- All 19 post pages updated with PostTags and RelatedPosts imports
+
 ## v1.1.0 — 2026-04-04
 
 ### Added

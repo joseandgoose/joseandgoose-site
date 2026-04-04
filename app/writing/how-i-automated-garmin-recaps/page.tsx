@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Automated Daily Garmin Recaps to My Inbox — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIAutomatedGarminRecaps() {
         <span className="post-meta-dot">·</span>
         <span>9 min read</span>
       </div>
+      <PostTags slug="how-i-automated-garmin-recaps" />
 
       <h1 className="post-title">How I Automated Daily Garmin Recaps to My Inbox</h1>
       <p className="post-subtitle">
@@ -426,6 +429,7 @@ export default function HowIAutomatedGarminRecaps() {
           Sleep score 85+? Push the workout. VO2 max trending down? Add interval training. The data was always
           there. Now it&rsquo;s impossible to ignore.
         </p>
+      <RelatedPosts slug="how-i-automated-garmin-recaps" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>

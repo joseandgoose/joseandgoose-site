@@ -43,6 +43,13 @@
   },
   {
     "type": "post",
+    "title": "How I Built an AI Content Pipeline for Every Writing Post",
+    "url": "/writing/how-i-built-content-pipeline",
+    "description": "Using Claude Haiku for topic tags, Supabase vector embeddings for related posts, and build-time scripts to turn 18 blog posts into a connected content product",
+    "date": "April 4, 2026"
+  },
+  {
+    "type": "post",
     "title": "How I Upgraded Search to Semantic Vector Embeddings",
     "url": "/writing/how-i-upgraded-search-to-vectors",
     "description": "From keyword matching to meaning-based search using pgvector, Supabase, and Hugging Face — and why it's the foundation for Ask Goose",

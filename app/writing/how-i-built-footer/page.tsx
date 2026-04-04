@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Built a Universal Footer Using Claude Code — Jose and Goose",
@@ -22,6 +24,7 @@ export default function HowIBuiltFooter() {
           <span className="post-meta-dot">·</span>
           <span>5 min read</span>
         </div>
+      <PostTags slug="how-i-built-footer" />
 
         {/* Title */}
         <h1 className="post-title">How I Built a Universal Footer Using Claude Code</h1>
@@ -335,6 +338,7 @@ export default function HowIBuiltFooter() {
         </div>
 
         {/* Back link bottom */}
+      <RelatedPosts slug="how-i-built-footer" />
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>
         </div>

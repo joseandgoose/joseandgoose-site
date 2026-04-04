@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Automated My Soccer Club with a Bot — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIAutomatedTrophyManager() {
         <span className="post-meta-dot">·</span>
         <span>10 min read</span>
       </div>
+      <PostTags slug="how-i-automated-trophymanager" />
 
       <h1 className="post-title">How I Automated My Soccer Club with a Bot</h1>
       <p className="post-subtitle">
@@ -313,6 +316,7 @@ export default function HowIAutomatedTrophyManager() {
           the bot bought three youth prospects overnight. Then checking in on Sunday to read
           Claude&rsquo;s honest assessment of whether those purchases were smart.
         </p>
+      <RelatedPosts slug="how-i-automated-trophymanager" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>

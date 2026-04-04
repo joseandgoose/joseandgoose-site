@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Added TL;DR by Goose AI Summaries — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIBuiltTLDR() {
         <span className="post-meta-dot">·</span>
         <span>5 min read</span>
       </div>
+      <PostTags slug="how-i-built-tldr" />
 
       <h1 className="post-title">How I Added &ldquo;TL;DR by Goose&rdquo; AI Summaries to Every Post</h1>
       <p className="post-subtitle">
@@ -228,6 +231,7 @@ export default function HowIBuiltTLDR() {
           that writes and deploys the post.
         </p>
       </div>
+      <RelatedPosts slug="how-i-built-tldr" />
 
       <div className="post-back post-back--bottom">
         <Link href="/writing">← Back to all writing</Link>

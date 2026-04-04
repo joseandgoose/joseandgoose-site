@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Upgraded Search to Semantic Vector Embeddings — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIUpgradedSearchToVectors() {
         <span className="post-meta-dot">&middot;</span>
         <span>4 min read</span>
       </div>
+      <PostTags slug="how-i-upgraded-search-to-vectors" />
 
       <h1 className="post-title">How I Upgraded Search to Semantic Vector Embeddings</h1>
       <p className="post-subtitle">
@@ -317,6 +320,7 @@ export default function HowIUpgradedSearchToVectors() {
             inherits a tested foundation instead of debugging two problems at once.
           </p>
         </div>
+      <RelatedPosts slug="how-i-upgraded-search-to-vectors" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>

@@ -1473,10 +1473,54 @@ footer:not(.universal-footer) {
    WRITING LIST PAGE
 ════════════════════════════════════════ */
 
+.writing-filters {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.writing-filter-pill {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--stone);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.writing-filter-pill:hover {
+  color: var(--forest);
+  border-color: var(--forest);
+}
+
+.writing-filter-pill--active {
+  color: #fff;
+  background: var(--forest);
+  border-color: var(--forest);
+}
+
+.writing-count {
+  width: 100%;
+  margin: 4px 0 0;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--stone);
+  letter-spacing: 0.02em;
+}
+
 .writing-list {
   max-width: 880px;
   margin: 0 auto;
-  padding: 48px 24px 96px;
+  padding: 0 24px 96px;
 }
 
 .writing-card {
@@ -1488,7 +1532,7 @@ footer:not(.universal-footer) {
   transition: opacity 0.2s ease;
 }
 
-.writing-card:first-child {
+.writing-list {
   border-top: 1px solid var(--rule);
 }
 
@@ -1572,6 +1616,79 @@ footer:not(.universal-footer) {
   margin-top: 64px;
   padding-top: 32px;
   border-top: 1px solid var(--rule);
+}
+
+/* ── Post Tags ── */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.post-tag-pill {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--forest-pale);
+  color: var(--forest);
+}
+
+/* ── Related Posts ── */
+.related-posts {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+
+.related-posts-heading {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 16px;
+}
+
+.related-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.related-post-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 20px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.related-post-card:hover {
+  border-color: var(--forest);
+  background: var(--forest-pale);
+}
+
+.related-post-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.related-post-meta {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--stone);
+  white-space: nowrap;
+  margin-left: 16px;
 }
 
 /* ── Meta ── */

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Built a Cron-Powered Operations Layer on a Home Linux Server — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIBuiltCronOps() {
         <span className="post-meta-dot">·</span>
         <span>9 min read</span>
       </div>
+      <PostTags slug="how-i-built-cron-ops" />
 
       <h1 className="post-title">How I Built a Cron-Powered Operations Layer on a Home Linux Server</h1>
       <p className="post-subtitle">
@@ -299,6 +302,7 @@ export default function HowIBuiltCronOps() {
           the single source of truth for everything the machine does, and reading it top to bottom
           is the fastest way to understand what this server is for.
         </p>
+      <RelatedPosts slug="how-i-built-cron-ops" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>

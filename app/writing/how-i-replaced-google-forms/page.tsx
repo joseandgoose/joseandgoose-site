@@ -1,5 +1,7 @@
 import Link from "next/link";
 import TLDRBadge from "@/app/components/TLDRBadge";
+import PostTags from "@/app/components/PostTags";
+import RelatedPosts from "@/app/components/RelatedPosts";
 
 export const metadata = {
   title: "How I Replaced Google Forms with a Custom Contact Form — Jose and Goose",
@@ -18,6 +20,7 @@ export default function HowIReplacedGoogleForms() {
         <span className="post-meta-dot">·</span>
         <span>7 min read</span>
       </div>
+      <PostTags slug="how-i-replaced-google-forms" />
 
       <h1 className="post-title">How I Replaced Google Forms with a Custom Contact Form Using Claude Code</h1>
       <p className="post-subtitle">
@@ -349,6 +352,7 @@ export default function HowIReplacedGoogleForms() {
           RLS policies, knew how API routes worked), the second database project was{" "}
           <strong>4x faster</strong>. The tools stayed the same. The experience compounded.
         </p>
+      <RelatedPosts slug="how-i-replaced-google-forms" />
 
         <div className="post-back post-back--bottom">
           <Link href="/writing">← Back to all writing</Link>
