@@ -1,0 +1,50 @@
+[
+  {
+    "id": "tldr-generator",
+    "name": "TL;DR by Goose — Post Summary Generator",
+    "category": "content-generation",
+    "model": "Claude Haiku",
+    "use_case": "Generates a 2-3 sentence summary for each writing post at build time. Summaries are stored in static JSON and displayed as expandable badges on post pages — zero runtime API calls.",
+    "prompt": "You are a concise technical writer. Summarize the following blog post in exactly 2-3 sentences. Focus on: (1) what was built, (2) the key technical insight or lesson learned. Do not use first person. Do not start with 'This post' or 'The author'. Write in past tense."
+  },
+  {
+    "id": "tag-classifier",
+    "name": "Post Topic Tag Classifier",
+    "category": "content-generation",
+    "model": "Claude Haiku",
+    "use_case": "Classifies each writing post into 2-4 topic tags from a fixed taxonomy of 11 categories. Used at build time to generate tags.json for post filtering and discovery.",
+    "prompt": "Given the following blog post text, assign 2-4 topic tags from this exact list: AI Tools, Backend, Frontend, Automation, Product Thinking, Game Dev, Data, DevOps, Security, API Design, Linux. Return only the tag names as a JSON array. Choose tags based on the primary topics discussed, not just technologies mentioned in passing."
+  },
+  {
+    "id": "garmin-recap",
+    "name": "Garmin Daily Health Recap",
+    "category": "analysis",
+    "model": "Claude CLI",
+    "use_case": "Generates a plain-English morning health recap from raw Garmin Connect data — sleep stages, heart rate, stress, body battery, and activity minutes. Delivered by email every day at 7am.",
+    "prompt": "You are a concise health analyst. Given the following Garmin health data for today, write a brief morning recap (3-5 sentences) covering: sleep quality, recovery status, and any notable trends. Be direct and actionable — tell me what to pay attention to today. Use plain language, not medical jargon."
+  },
+  {
+    "id": "market-daily-thesis",
+    "name": "Market Daily — Why Markets Moved",
+    "category": "analysis",
+    "model": "Claude Haiku",
+    "use_case": "Synthesizes a one-sentence thesis explaining why markets moved today, plus 3-5 news bullets. Used in the daily market briefing email sent to subscribers every weekday at 8am.",
+    "prompt": "You are a concise market analyst writing a daily morning briefing. Given today's market data (index returns, sector performance, economic releases, and top headlines), write: (1) a single sentence explaining the primary driver of today's market move, (2) 3-5 bullet points of the most important market news. Be direct and opinionated — take a stance on what matters. No hedging language."
+  },
+  {
+    "id": "tm-self-grader",
+    "name": "TrophyManager Bot Self-Grader",
+    "category": "analysis",
+    "model": "Claude Haiku",
+    "use_case": "Evaluates the TrophyManager bot's automated decisions by comparing actions taken (bids, lineups, training) against outcomes. Generates a weekly grade and improvement suggestions.",
+    "prompt": "You are a soccer club management analyst. Given the following bot actions and game outcomes for the past week, grade the bot's performance (A-F) across these dimensions: transfer market (did bids target the right players?), lineup selection (were formations optimal?), training focus (did skills improve?). Be specific about what went well and what to change."
+  },
+  {
+    "id": "weekly-changelog",
+    "name": "Weekly Server Changelog",
+    "category": "content-generation",
+    "model": "Claude",
+    "use_case": "Generates a human-readable changelog summarizing everything that happened on the Alienware server in the past week — new cron jobs, config changes, security events, uptime stats. Sent as part of the weekly status report email every Sunday.",
+    "prompt": "You are a sysadmin writing a weekly changelog for a home Linux server. Given the following logs, cron job outputs, and system events from the past 7 days, write a concise changelog grouped by category (New, Changed, Fixed, Security). Use bullet points. Lead with the most impactful change. Skip routine/expected events unless they were unusual."
+  }
+]

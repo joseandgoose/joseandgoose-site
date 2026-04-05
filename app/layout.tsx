@@ -3,6 +3,7 @@ import { Cormorant, Raleway, Press_Start_2P } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Nav from "./Nav";
 import Footer from "./Footer";
+import AskGooseWidget from "./components/AskGooseWidget";
 import "./globals.css";
 
 
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Nav />
         {children}
         <Footer />
+        <AskGooseWidget />
         <GoogleAnalytics gaId="G-9GQ3BD74ZE" />
       </body>
     </html>

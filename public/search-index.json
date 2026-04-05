@@ -42,6 +42,19 @@
     "description": "Community map for sharing fruit from backyard trees in your neighborhood."
   },
   {
+    "type": "feature",
+    "title": "Ask Goose",
+    "url": "/ask-goose",
+    "description": "AI-powered chat — ask anything about Jose, his career, projects, or this site."
+  },
+  {
+    "type": "post",
+    "title": "How I Built Ask Goose, a RAG Chatbot for My Personal Site",
+    "url": "/writing/how-i-built-ask-goose",
+    "description": "A streaming AI chatbot grounded in 291 content chunks, powered by Claude Haiku, Supabase pgvector, and a floating widget that follows you across the site",
+    "date": "April 4, 2026"
+  },
+  {
     "type": "post",
     "title": "How I Built an AI Content Pipeline for Every Writing Post",
     "url": "/writing/how-i-built-content-pipeline",

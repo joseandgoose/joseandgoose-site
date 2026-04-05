@@ -53,6 +53,12 @@ const staticEntries: SearchEntry[] = [
     url: "/fruit-exchange",
     description: "Community map for sharing fruit from backyard trees in your neighborhood.",
   },
+  {
+    type: "feature",
+    title: "Ask Goose",
+    url: "/ask-goose",
+    description: "AI-powered chat — ask anything about Jose, his career, projects, or this site.",
+  },
 ];
 
 const postEntries: SearchEntry[] = posts.map((p) => ({

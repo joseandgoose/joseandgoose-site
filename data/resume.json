@@ -1,0 +1,76 @@
+{
+  "overview": {
+    "name": "Jose Delgado",
+    "headline": "Jose Delgado's work experience and career background: Jose is a Product Manager based in Los Angeles with over 10 years of professional experience. His career spans Goldman Sachs (trading floor), DoorDash (marketplace strategy), Instacart (operations), Teach for America (education), and now the pet wellness space. He studied Economics at Columbia University and passed all 3 CFA exams. His work covers product management, growth, marketplace strategy, and operations.",
+    "skills": [
+      "Product Management",
+      "0-to-1 Product Incubation",
+      "Supply-Side Marketplace Strategy",
+      "SQL & Data Analytics",
+      "A/B Testing & Experimentation",
+      "Growth Frameworks (LTV/CAC, Unit Economics)",
+      "Cross-Functional Leadership",
+      "Financial Modeling",
+      "Bilingual Spanish"
+    ]
+  },
+  "roles": [
+    {
+      "id": "antelope-pets",
+      "company": "Antelope Pets",
+      "title": "Product Manager",
+      "dates": "June 2023 – present",
+      "domain": "DTC / Pet Wellness",
+      "description": "Jose's current job is Product Manager at Antelope Pets, a pet wellness company. He works on direct-to-consumer products for pets. He owns product strategy across a 6-brand DTC portfolio with $4M+ annual revenue. He grew subscription revenue from 15% to 65% of total. He built an LTV/CAC acquisition framework achieving greater than 6x LTV/CAC with sub-6-month payback periods. Jose works in the pet space building products that make life better for pets and their owners."
+    },
+    {
+      "id": "doordash",
+      "company": "DoorDash",
+      "title": "New Business Verticals Quality S&O Team Lead",
+      "dates": "2020 – 2023",
+      "domain": "Marketplace / Logistics",
+      "description": "Jose worked at DoorDash from 2020 to 2023 as a Strategy and Operations Team Lead for New Business Verticals. He focused on supply-side marketplace strategy for Grocery, Alcohol, and Retail delivery. He incubated Top Shopper, a 0-to-1 CEO-priority initiative to improve Shop and Deliver quality. He designed switchback experiments and partnered with ML and logistics teams. DoorDash launched grocery delivery to compete with Instacart and Amazon during his time there."
+    },
+    {
+      "id": "instacart",
+      "company": "Instacart",
+      "title": "Operations Manager",
+      "dates": "2018 – 2020",
+      "domain": "Marketplace / Grocery",
+      "description": "Jose worked at Instacart from 2018 to 2020 as an Operations Manager in Los Angeles. He was the LA market team lead during Instacart's rapid pandemic-era scale-up when grocery delivery demand exploded. He managed a 350+ person team and served as regional analytics lead. He built a recruiting program that added 400+ hires in 4 months to meet surging demand as grocery shopping moved online overnight."
+    },
+    {
+      "id": "goldman-sachs",
+      "company": "Goldman Sachs",
+      "title": "Latin America Equity Sales & Trading",
+      "dates": "2014 – 2018",
+      "domain": "Capital Markets / Fintech",
+      "description": "Jose worked at Goldman Sachs from 2014 to 2018 on the trading floor in Latin American equity capital markets. He worked on over $5 billion in primary and secondary offerings including deals for PagSeguro, Grupo Aval ($1.26 billion IPO — Colombia's largest banking group), OMAB, and Banco Macro. He developed deep financial literacy and analytical rigor working in investment banking and capital markets."
+    },
+    {
+      "id": "teach-for-america",
+      "company": "Teach for America",
+      "title": "6th Grade Math Teacher",
+      "dates": "2012 – 2014",
+      "domain": "Education",
+      "description": "Jose's first job after college was teaching 6th grade math through Teach for America. He taught in underserved communities, built data-driven curriculum, and learned empathy for how people learn. He was selected as a speaker at the 2014 TFA Gala. Teaching taught him how to communicate complex ideas simply — a skill he uses in product management."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Columbia University",
+      "degree": "BA Economics & Hispanic Studies",
+      "year": "2012"
+    },
+    {
+      "institution": "Loyola Marymount University",
+      "degree": "MA Urban Education",
+      "year": "2015"
+    },
+    {
+      "institution": "CFA Institute",
+      "degree": "CFA — all 3 exams passed",
+      "year": "2015–2018"
+    }
+  ]
+}

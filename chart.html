@@ -59,27 +59,49 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
 <body>
 
 <h1>joseandgoose.com</h1>
-<div class="subtitle">Personal site — Next.js 16 + TypeScript + Tailwind CSS 4 — deployed on Vercel — v1.2.0 — 2026-04-04</div>
+<div class="subtitle">Personal site — Next.js 16 + TypeScript + Tailwind CSS 4 — deployed on Vercel — v1.3.0 — 2026-04-04</div>
 
 <div class="summary-grid">
-  <div class="summary-box"><div class="val">19</div><div class="lbl">Writing Posts</div></div>
-  <div class="summary-box"><div class="val">3</div><div class="lbl">Features</div></div>
-  <div class="summary-box"><div class="val">11</div><div class="lbl">API Routes</div></div>
-  <div class="summary-box"><div class="val">v1.2.0</div><div class="lbl">Version</div></div>
+  <div class="summary-box"><div class="val">20</div><div class="lbl">Writing Posts</div></div>
+  <div class="summary-box"><div class="val">4</div><div class="lbl">Features</div></div>
+  <div class="summary-box"><div class="val">12</div><div class="lbl">API Routes</div></div>
+  <div class="summary-box"><div class="val">v1.3.0</div><div class="lbl">Version</div></div>
 </div>
 
 <h2>Pages &amp; Features</h2>
 <ul class="page-list">
   <li><span>/</span> <span class="tag">homepage</span></li>
-  <li><span>/writing</span> <span class="tag">18 posts</span></li>
+  <li><span>/writing</span> <span class="tag">20 posts</span></li>
   <li><span>/about</span> <span class="tag">static</span></li>
   <li><span>/contact</span> <span class="tag">Supabase</span></li>
+  <li><span>/ask-goose</span> <span class="tag">RAG chatbot · Claude · pgvector</span></li>
   <li><span>/numerator</span> <span class="tag">game · Supabase</span></li>
   <li><span>/fruit-exchange</span> <span class="tag">Leaflet · Supabase · Resend</span></li>
   <li><span>/work-and-projects</span> <span class="tag">static</span></li>
   <li><span>/subscribe · /unsubscribe</span> <span class="tag">market daily · Supabase</span></li>
+  <li><span>/api/chat</span> <span class="tag">streaming · Claude · pgvector · HF</span></li>
   <li><span>/api/search</span> <span class="tag">vector · Supabase · HF</span></li>
 </ul>
+
+<h2>v1.3.0 Session Notes — 2026-04-04</h2>
+<div class="notes-grid">
+  <div class="note-card">
+    <div class="note-card-title">Ask Goose RAG chatbot built <span class="note-tag note-tag-feat">feature</span></div>
+    Full RAG chatbot powered by Claude Haiku, Supabase pgvector, and Hugging Face embeddings. 300+ content chunks embedded from 20 writing posts, resume roles, project descriptions, and prompt library entries. Streaming API endpoint with keyword-boosted retrieval (career/tech/project queries force-include relevant chunks) and page-aware context injection (the widget knows which page you're on). Chat bubbles, character counter, 10-question limit with /contact redirect, inline link rendering.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Floating widget on every page <span class="note-tag note-tag-feat">feature</span></div>
+    AskGooseWidget component renders a chat bubble icon in the bottom-right corner of every page (hidden on /ask-goose where the full-page version lives). Conversations persist across page navigation via sessionStorage. Yellow SVG paw icon in the header for visibility on dark green. Mobile goes full-screen. Widget state (messages, session ID, question count, open/closed) survives navigation.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Keyword-boosted + page-aware retrieval <span class="note-tag note-tag-arch">arch</span></div>
+    MiniLM-L6-v2 embeddings alone couldn't bridge conversational queries to formal resume descriptions (similarity scores below 0.12). Fix: keyword detection force-includes content types when queries mention career, tech, projects, etc. Page-aware injection: when currentPage is a writing post URL, all chunks from that post are force-included. Chat history trimmed to last 1 exchange to prevent cross-topic bleed.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Chat QA grading pipeline <span class="note-tag note-tag-feat">feature</span></div>
+    Python script on the Alienware server grades batches of 10 chat sessions using local Ollama (qwen2.5:1.5b — chosen for 6GB RAM constraint on 2011 hardware). Grades on 5 dimensions: accuracy, helpfulness, tone, brevity, fallback handling. Stores results in Supabase chat_grades table, emails report via Resend. Cron job runs daily at 8pm, only triggers when 10+ ungraded sessions exist. First batch scored 3.9/5.
+  </div>
+</div>
 
 <h2>v1.2.0 Session Notes — 2026-04-04</h2>
 <div class="notes-grid">

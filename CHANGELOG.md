@@ -1,5 +1,30 @@
 # Changelog
 
+## v1.3.0 — 2026-04-04
+
+### Added
+- Ask Goose RAG chatbot — Claude Haiku streaming responses grounded in 300+ embedded content chunks
+- Supabase schema: rag_chunks (pgvector), chat_sessions, chat_messages, chat_grades tables
+- RAG embedding pipeline (scripts/generate-rag-chunks.ts) — chunks posts by H2 sections, resume roles, projects, prompt library
+- Structured data files: data/resume.json, data/projects.json, data/prompts.json
+- /api/chat streaming endpoint with keyword-boosted retrieval and page-aware context injection
+- /ask-goose full-page chat UI with chat bubbles, character counter, 10-question limit, source citations
+- Floating chat widget on every page (AskGooseWidget) — persists conversation across navigation via sessionStorage
+- Inline link rendering for /paths and **bold** in chat responses
+- Chat QA grading script (scripts/grade-ask-goose.py) — Ollama qwen2.5:1.5b on Alienware, cron at 8pm daily
+- Supabase grades schema (chat_grades table, graded flag on chat_sessions)
+- New writing post: "How I Built Ask Goose, a RAG Chatbot for My Personal Site"
+- Ask Goose, Market Daily, TrophyManager Bot added to Projects tab
+- Ask Goose added to search index
+
+### Changed
+- System prompt tuned for brevity (1 paragraph ideal) with /contact fallback for unknown answers
+- Chat history trimmed to last 1 exchange to prevent cross-topic bleed
+- Yellow SVG paw icon in widget header for visibility on dark green
+
+### Security
+- Removed hardcoded email from garmin-daily-recap public repo (pushed to GitHub)
+
 ## v1.2.0 — 2026-04-04
 
 ### Added

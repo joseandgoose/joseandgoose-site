@@ -1,0 +1,58 @@
+[
+  {
+    "id": "joseandgoose-site",
+    "name": "joseandgoose.com",
+    "category": "Personal Site",
+    "tech_stack": ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+    "status": "live",
+    "url": "/",
+    "description": "Jose's personal website. Started as a blank Next.js template and grew week-by-week with Claude — search, contact form, games, maps, semantic vector search, and 19 published case studies. Every feature has a corresponding 'how I built it' post. Deployed on Vercel with Supabase for data."
+  },
+  {
+    "id": "garmin-daily-recap",
+    "name": "Garmin Daily Recap",
+    "category": "Local Automation",
+    "tech_stack": ["Python", "Claude CLI", "launchd", "Resend"],
+    "status": "live",
+    "url": "/writing/how-i-automated-garmin-recaps",
+    "github": "https://github.com/joseandgoose/garmin-daily-recap",
+    "description": "Fetches sleep, heart rate, stress, and activity data from Garmin Connect every morning and pipes it into Claude to generate a plain-English health recap — delivered by email by 7am. Runs unattended via launchd on the Alienware server."
+  },
+  {
+    "id": "numerator",
+    "name": "Numerator",
+    "category": "Web Game",
+    "tech_stack": ["Next.js", "Supabase", "TypeScript"],
+    "status": "live",
+    "url": "/numerator",
+    "github": "https://github.com/joseandgoose/numerator",
+    "description": "A multiplayer number guessing game based on a game theory puzzle. Players guess a number between 1 and 100 with real-time player count and shareable score cards. Built with Next.js and Supabase in a single AI-assisted session."
+  },
+  {
+    "id": "fruit-exchange",
+    "name": "Fruit Exchange",
+    "category": "Community Feature",
+    "tech_stack": ["Next.js", "Supabase", "Leaflet", "Resend"],
+    "status": "live",
+    "url": "/fruit-exchange",
+    "description": "A community map where neighbors list backyard fruit trees and others can find them. Map rendering with Leaflet and OpenStreetMap, modal flows for listing and requesting, email verification for ownership. Styled with a Harvest Moon SNES pixel-art aesthetic."
+  },
+  {
+    "id": "market-daily",
+    "name": "Market Daily Briefing",
+    "category": "Automated Email",
+    "tech_stack": ["Python", "Claude Haiku", "Resend", "Supabase", "cron"],
+    "status": "live",
+    "url": "/writing/how-i-built-market-daily",
+    "description": "A self-sending daily market briefing. A Python script on the Alienware server scrapes market data, asks Claude Haiku to synthesize a one-sentence 'why markets moved' thesis, formats an HTML email with news bullets, economic calendar, and options chains, and delivers to subscribers via Resend every weekday at 8am."
+  },
+  {
+    "id": "trophymanager-bot",
+    "name": "TrophyManager Bot",
+    "category": "Game Automation",
+    "tech_stack": ["Python", "Claude", "cron", "Supabase"],
+    "status": "live",
+    "url": "/writing/how-i-automated-trophymanager",
+    "description": "A Python bot that automates a TrophyManager.com soccer club — 9 cron jobs handling market scanning, bid sniping, lineups, training, sales, and a Claude-powered self-grading module. Built in 10 days across 10 sessions on the headless Alienware server."
+  }
+]

@@ -46,6 +46,9 @@ export default function Work() {
             </>
           ) : (
             <>
+              <a href="#ask-goose">Ask Goose</a>
+              <a href="#market-daily">Market Daily</a>
+              <a href="#trophymanager">TrophyManager Bot</a>
               <a href="#garmin">Garmin Recap</a>
               <a href="#numerator">Numerator</a>
               <a href="#fruit-exchange">Fruit Exchange</a>
@@ -227,6 +230,85 @@ export default function Work() {
           </>
         ) : (
           <>
+
+            {/* ASK GOOSE */}
+            <section className="press-group" id="ask-goose">
+              <div className="press-group-header">
+                <p className="press-group-eyebrow">AI Chatbot</p>
+                <h2 className="press-group-title">Ask Goose</h2>
+                <p className="press-group-desc">Next.js · Claude Haiku · Supabase pgvector · Hugging Face</p>
+              </div>
+              <div className="press-list">
+                <a href="/ask-goose" className="press-item">
+                  <div className="press-item-meta">
+                    <span className="press-source">joseandgoose.com</span>
+                    <span className="press-dot">·</span>
+                    <span className="press-date">2026</span>
+                  </div>
+                  <h3 className="press-title">Try Ask Goose</h3>
+                  <p className="press-desc">A RAG chatbot grounded in 300+ content chunks — ask anything about Jose, his career, projects, or the tech behind this site. Also available as a floating widget on every page.</p>
+                  <span className="press-link">Try it →</span>
+                </a>
+                <a href="/writing/how-i-built-ask-goose" className="press-item">
+                  <div className="press-item-meta">
+                    <span className="press-source">joseandgoose.com</span>
+                    <span className="press-dot">·</span>
+                    <span className="press-date">2026</span>
+                  </div>
+                  <h3 className="press-title">How I Built Ask Goose</h3>
+                  <p className="press-desc">The flagship case study: RAG architecture, system prompt design, three failure modes, and why the vector store from an earlier project made it all possible.</p>
+                  <span className="press-link">Read case study →</span>
+                </a>
+              </div>
+            </section>
+
+            <div className="press-divider" />
+
+            {/* MARKET DAILY */}
+            <section className="press-group" id="market-daily">
+              <div className="press-group-header">
+                <p className="press-group-eyebrow">Automated Email</p>
+                <h2 className="press-group-title">Market Daily Briefing</h2>
+                <p className="press-group-desc">Python · Claude Haiku · Resend · Supabase · cron</p>
+              </div>
+              <div className="press-list">
+                <a href="/writing/how-i-built-market-daily" className="press-item">
+                  <div className="press-item-meta">
+                    <span className="press-source">joseandgoose.com</span>
+                    <span className="press-dot">·</span>
+                    <span className="press-date">2026</span>
+                  </div>
+                  <h3 className="press-title">How I Built Market Daily</h3>
+                  <p className="press-desc">A Python script on the Alienware server scrapes market data, asks Claude to explain why markets moved, and delivers an HTML email to subscribers every weekday at 8am.</p>
+                  <span className="press-link">Read case study →</span>
+                </a>
+              </div>
+            </section>
+
+            <div className="press-divider" />
+
+            {/* TROPHYMANAGER BOT */}
+            <section className="press-group" id="trophymanager">
+              <div className="press-group-header">
+                <p className="press-group-eyebrow">Game Automation</p>
+                <h2 className="press-group-title">TrophyManager Bot</h2>
+                <p className="press-group-desc">Python · Claude · cron · Supabase</p>
+              </div>
+              <div className="press-list">
+                <a href="/writing/how-i-automated-trophymanager" className="press-item">
+                  <div className="press-item-meta">
+                    <span className="press-source">joseandgoose.com</span>
+                    <span className="press-dot">·</span>
+                    <span className="press-date">2026</span>
+                  </div>
+                  <h3 className="press-title">How I Automated My Soccer Club with a Bot</h3>
+                  <p className="press-desc">A Python bot on a headless Linux server that manages a TrophyManager.com soccer club — 9 cron jobs handling scouting, bidding, lineups, training, and a Claude-powered self-grading module.</p>
+                  <span className="press-link">Read case study →</span>
+                </a>
+              </div>
+            </section>
+
+            <div className="press-divider" />
 
             {/* GARMIN DAILY RECAP */}
             <section className="press-group" id="garmin">

@@ -9,6 +9,14 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "how-i-built-ask-goose",
+    title: "How I Built Ask Goose, a RAG Chatbot for My Personal Site",
+    subtitle: "A streaming AI chatbot grounded in 300+ content chunks, powered by Claude Haiku, Supabase pgvector, and a floating widget that follows you across the site",
+    date: "April 4, 2026",
+    readTime: "8 min read",
+    tags: ["AI Tools", "Backend", "Data", "Product Thinking"],
+  },
+  {
     slug: "how-i-built-content-pipeline",
     title: "How I Built an AI Content Pipeline for Every Writing Post",
     subtitle: "Using Claude Haiku for topic tags, Supabase vector embeddings for related posts, and build-time scripts to turn 18 blog posts into a connected content product",

@@ -172,5 +172,14 @@
     ],
     "readingTime": "6 min read",
     "wordCount": 1315
+  },
+  "how-i-built-ask-goose": {
+    "tags": [
+      "AI Tools",
+      "Backend",
+      "API Design"
+    ],
+    "readingTime": "7 min read",
+    "wordCount": 1532
   }
 }
