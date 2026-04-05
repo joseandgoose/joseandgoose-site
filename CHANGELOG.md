@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.3.2 — 2026-04-05
+
+### Fixed
+- Chat widget overflowed mobile viewport — header pushed off-screen, excess white space around suggestions
+- Mobile keyboard pushed chat panel up instead of resizing to fit available space
+
+### Changed
+- Replaced starter prompt "What AI prompts does Jose use?" with "How did Jose build this site?" (better RAG coverage)
+
 ## v1.3.1 — 2026-04-05
 
 ### Fixed

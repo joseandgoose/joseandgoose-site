@@ -87,6 +87,10 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
 <h2>v1.3.0 Session Notes — 2026-04-04</h2>
 <div class="notes-grid">
   <div class="note-card">
+    <div class="note-card-title">v1.3.2 — Mobile chat widget fixes <span class="note-tag note-tag-fix">fix</span></div>
+    Panel now uses 100dvh + visualViewport API to fit mobile screens and resize when keyboard opens. Swapped weak starter prompt for one with strong RAG grounding.
+  </div>
+  <div class="note-card">
     <div class="note-card-title">v1.3.1 — Ask Goose production fix <span class="note-tag note-tag-fix">fix</span></div>
     ANTHROPIC_API_KEY was missing from Vercel env. Added fail-fast env validation at module load and SSE error handling in both chat components so errors surface to users instead of infinite spinner.
   </div>

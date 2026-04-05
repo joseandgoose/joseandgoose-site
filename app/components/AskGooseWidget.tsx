@@ -23,7 +23,7 @@ const SUGGESTED_QUESTIONS = [
   "What has Jose built?",
   "Jose's career background",
   "What tech powers this site?",
-  "What AI prompts does Jose use?",
+  "How did Jose build this site?",
 ];
 
 /** Turn inline /paths and **bold** into clickable links and <strong> tags */
@@ -74,6 +74,7 @@ export default function AskGooseWidget() {
   const [questionCount, setQuestionCount] = useState(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   const isLimitReached = questionCount >= MAX_QUESTIONS;
   const isAskGoosePage = pathname === "/ask-goose";
@@ -102,6 +103,30 @@ export default function AskGooseWidget() {
 
   useEffect(() => {
     if (open) inputRef.current?.focus();
+  }, [open]);
+
+  // Resize panel to fit visible viewport when mobile keyboard opens
+  useEffect(() => {
+    if (!open) return;
+    const vv = window.visualViewport;
+    if (!vv) return;
+
+    function onResize() {
+      const panel = panelRef.current;
+      if (!panel) return;
+      // Only apply on mobile-width screens
+      if (window.innerWidth > 600) return;
+      panel.style.height = `${vv!.height}px`;
+      panel.style.top = `${vv!.offsetTop}px`;
+    }
+
+    onResize();
+    vv.addEventListener("resize", onResize);
+    vv.addEventListener("scroll", onResize);
+    return () => {
+      vv.removeEventListener("resize", onResize);
+      vv.removeEventListener("scroll", onResize);
+    };
   }, [open]);
 
   async function handleSend(text?: string) {
@@ -216,7 +241,7 @@ export default function AskGooseWidget() {
 
       {/* Chat panel */}
       {open && (
-        <div className="goose-widget-panel">
+        <div ref={panelRef} className="goose-widget-panel">
           {/* Header */}
           <div className="goose-widget-header">
             <div className="goose-widget-header-info">
