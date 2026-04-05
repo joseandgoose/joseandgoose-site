@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.3.1 — 2026-04-05
+
+### Fixed
+- Ask Goose broken in production — ANTHROPIC_API_KEY missing from Vercel env vars
+- Chat widget spinner hung indefinitely on API errors — now surfaces error message to user
+
+### Added
+- Fail-fast env validation in /api/chat — missing keys break the build instead of failing silently per-request
+
 ## v1.3.0 — 2026-04-04
 
 ### Added

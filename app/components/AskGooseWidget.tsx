@@ -145,7 +145,9 @@ export default function AskGooseWidget() {
           if (!line.startsWith("data: ")) continue;
           const data = JSON.parse(line.slice(6));
 
-          if (data.type === "meta") {
+          if (data.type === "error") {
+            throw new Error(data.error || "Something went wrong");
+          } else if (data.type === "meta") {
             setSessionId(data.sessionId);
             sources = data.sources || [];
           } else if (data.type === "text") {

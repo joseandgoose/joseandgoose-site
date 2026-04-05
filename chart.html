@@ -46,6 +46,7 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
 .note-tag-feat { background: var(--green-bg); color: var(--green); }
 .note-tag-content { background: var(--blue-bg); color: var(--blue-text); }
 .note-tag-arch { background: #3b0764; color: #d8b4fe; }
+.note-tag-fix { background: #451a03; color: #fbbf24; }
 
 .page-list { list-style: none; padding: 0; }
 .page-list li { padding: 8px 12px; border-bottom: 1px solid var(--border-1); font-size: 0.8rem; display: flex; justify-content: space-between; }
@@ -85,6 +86,10 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
 
 <h2>v1.3.0 Session Notes — 2026-04-04</h2>
 <div class="notes-grid">
+  <div class="note-card">
+    <div class="note-card-title">v1.3.1 — Ask Goose production fix <span class="note-tag note-tag-fix">fix</span></div>
+    ANTHROPIC_API_KEY was missing from Vercel env. Added fail-fast env validation at module load and SSE error handling in both chat components so errors surface to users instead of infinite spinner.
+  </div>
   <div class="note-card">
     <div class="note-card-title">Ask Goose RAG chatbot built <span class="note-tag note-tag-feat">feature</span></div>
     Full RAG chatbot powered by Claude Haiku, Supabase pgvector, and Hugging Face embeddings. 300+ content chunks embedded from 20 writing posts, resume roles, project descriptions, and prompt library entries. Streaming API endpoint with keyword-boosted retrieval (career/tech/project queries force-include relevant chunks) and page-aware context injection (the widget knows which page you're on). Chat bubbles, character counter, 10-question limit with /contact redirect, inline link rendering.
