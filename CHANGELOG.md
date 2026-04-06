@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.3.3 — 2026-04-05
+
+### Fixed
+- iOS Safari mobile: input auto-zoom (font-size 14→16px), horizontal scroll (overflow-wrap on bubble content), pinch-zoom (touch-action: manipulation on panel), rubber-band scroll bleed (overscroll-behavior: contain)
+
+### Added
+- Google Sheet grading pipeline — chatbot interactions synced daily from Supabase with LLM scores from chat_grades, Jose columns for manual grading
+- sync-goose-sheets.py on Alienware (cron 5:30 AM) — reads chat_messages + chat_grades, appends full untruncated responses to Google Sheet via service account
+
 ## v1.3.2 — 2026-04-05
 
 ### Fixed

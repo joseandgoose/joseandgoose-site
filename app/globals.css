@@ -2828,6 +2828,7 @@ footer:not(.universal-footer) {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  touch-action: manipulation;
 }
 
 /* Header */
@@ -2880,10 +2881,13 @@ footer:not(.universal-footer) {
 .goose-widget-messages {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 16px 12px;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Empty state */
@@ -2989,6 +2993,8 @@ footer:not(.universal-footer) {
 
 .goose-widget-bubble-content {
   white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .goose-widget-typing {
@@ -3048,7 +3054,7 @@ footer:not(.universal-footer) {
 .goose-widget-input {
   width: 100%;
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 42px 10px 14px;
   border: 1px solid var(--rule);
   border-radius: 8px;
