@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.3.4 — 2026-04-21
+
+### Changed
+- Ask Goose grading: upgraded model from `qwen2.5:1.5b` to `qwen2.5:7b-instruct-q4_K_M` for more reliable rubric scoring (~Haiku-tier reasoning on short chat sessions)
+- Grading cron: changed from `0 3 * * *` daily batch-of-5 to `*/15 * * * *` one-session-per-fire with lockfile, `--once` flag, and thermal-gate skip. Natural ~7-on / 7-off cadence respects Alienware thermal headroom
+- Backfill: new `fetch_next_ungraded_by_current_model()` auto-selects oldest session not yet graded by the current model. Old 1.5B grades preserved as separate `graded_by` rows
+- Timeouts raised to 1200s main / 900s retry for slower 7B inference
+
+### Infrastructure notes
+- Script on Alienware: `/home/jd/ai-jobs/grade-ask-goose.py` (backup at `.bak-2026-04-21`)
+- Grading time ~7-8 min/session at CPUQuota=250%
+
 ## v1.3.3 — 2026-04-05
 
 ### Fixed

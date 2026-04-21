@@ -60,7 +60,7 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
 <body>
 
 <h1>joseandgoose.com</h1>
-<div class="subtitle">Personal site — Next.js 16 + TypeScript + Tailwind CSS 4 — deployed on Vercel — v1.3.3 — 2026-04-05</div>
+<div class="subtitle">Personal site — Next.js 16 + TypeScript + Tailwind CSS 4 — deployed on Vercel — v1.3.4 — 2026-04-21</div>
 
 <div class="summary-grid">
   <div class="summary-box"><div class="val">20</div><div class="lbl">Writing Posts</div></div>
@@ -83,6 +83,22 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
   <li><span>/api/chat</span> <span class="tag">streaming · Claude · pgvector · HF</span></li>
   <li><span>/api/search</span> <span class="tag">vector · Supabase · HF</span></li>
 </ul>
+
+<h2>v1.3.4 Session Notes — 2026-04-21</h2>
+<div class="notes-grid">
+  <div class="note-card">
+    <div class="note-card-title">Ask Goose grading: model upgrade to qwen2.5:7b <span class="note-tag note-tag-arch">arch</span></div>
+    Swapped Ollama model from qwen2.5:1.5b to qwen2.5:7b-instruct-q4_K_M (~Haiku-tier reasoning) for more reliable rubric scoring. 14B variant was pulled but too slow on this CPU (>20min/inference at CPUQuota=250%). RAM upgrade enabled the jump — not CPU — so 7B is the quality ceiling on this machine. Grading takes ~7-8 min/session now vs ~30s on 1.5B.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Cron spread: */15 one-at-a-time <span class="note-tag note-tag-arch">arch</span></div>
+    Replaced 0 3 * * * daily batch-of-5 with */15 * * * * one-session-per-fire. Script runs with --once flag + lockfile at /tmp/grade-ask-goose.lock, falls through when thermal-gate detects CPU &gt;75°C. Natural ~7-on / 7-off cadence avoids sustained thermal load while catching up ~55 backlogged sessions overnight.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Backfill-aware session picker <span class="note-tag note-tag-feat">feature</span></div>
+    New fetch_next_ungraded_by_current_model() queries chat_grades filtered by the current OLLAMA_MODEL constant, builds a set of already-graded session IDs, then returns the oldest chat_sessions row not in that set. Model-name-scoped so old 1.5B grades are preserved as separate rows — enables LLM-vs-LLM comparison later.
+  </div>
+</div>
 
 <h2>v1.3.3 Session Notes — 2026-04-05</h2>
 <div class="notes-grid">
