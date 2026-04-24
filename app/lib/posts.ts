@@ -9,6 +9,14 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "grading-the-grader",
+    title: "Grading the grader: qwen 1.5b vs 7b",
+    subtitle: "I swapped the local AI that grades my chatbot for a bigger one and compared the two across 55 real conversations. Here's what a smaller model misses — and where Claude Haiku and Sonnet would sit on the same ladder.",
+    date: "April 23, 2026",
+    readTime: "6 min read",
+    tags: ["AI Tools", "Product Thinking", "Automation"],
+  },
+  {
     slug: "how-i-built-ask-goose",
     title: "How I Built Ask Goose, a RAG Chatbot for My Personal Site",
     subtitle: "A streaming AI chatbot grounded in 300+ content chunks, powered by Claude Haiku, Supabase pgvector, and a floating widget that follows you across the site",
