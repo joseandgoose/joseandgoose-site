@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.4.0 — 2026-04-23
+
+### Added
+- New writing post: `/writing/grading-the-grader` — "Grading the grader: qwen 1.5b vs 7b" (8 min read). Compares the old (qwen2.5:1.5b) vs new (qwen2.5:7b-instruct-q4_K_M) chatbot graders across 55 real Ask Goose sessions, with three hand-rolled inline SVG charts (per-metric means, accuracy distribution, fallback distribution). Includes hypothetical positioning for Claude Haiku 4.5 and Sonnet 4.6 on the same capability ladder. Tags: AI Tools, Product Thinking, Automation.
+- TL;DR by Goose, topic tags, related-posts index, and 15 RAG chunks upserted to Supabase `rag_chunks` so Ask Goose can retrieve and cite the post.
+
+### Notes (Alienware-side work captured here for reference)
+- `sync-goose-sheets.py` rewritten to track multiple graders side-by-side. Keyed by `chat_grades.graded_by`, writes model-specific column blocks (qwen-1.5b + qwen-7b, six metrics each) into the Google Sheet. New backfill pass populates grade cells on existing rows when later graded. `MODELS` list at top makes adding Haiku/Sonnet a one-line change.
+- New "Grader Comparison" tab on the Google Sheet — per-metric summary, score distributions, 7 findings, and hypothetical Claude Haiku/Sonnet positioning.
+
 ## v1.3.4 — 2026-04-21
 
 ### Changed

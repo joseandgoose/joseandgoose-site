@@ -60,19 +60,19 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
 <body>
 
 <h1>joseandgoose.com</h1>
-<div class="subtitle">Personal site — Next.js 16 + TypeScript + Tailwind CSS 4 — deployed on Vercel — v1.3.4 — 2026-04-21</div>
+<div class="subtitle">Personal site — Next.js 16 + TypeScript + Tailwind CSS 4 — deployed on Vercel — v1.4.0 — 2026-04-23</div>
 
 <div class="summary-grid">
-  <div class="summary-box"><div class="val">20</div><div class="lbl">Writing Posts</div></div>
+  <div class="summary-box"><div class="val">21</div><div class="lbl">Writing Posts</div></div>
   <div class="summary-box"><div class="val">4</div><div class="lbl">Features</div></div>
   <div class="summary-box"><div class="val">12</div><div class="lbl">API Routes</div></div>
-  <div class="summary-box"><div class="val">v1.3.0</div><div class="lbl">Version</div></div>
+  <div class="summary-box"><div class="val">v1.4.0</div><div class="lbl">Version</div></div>
 </div>
 
 <h2>Pages &amp; Features</h2>
 <ul class="page-list">
   <li><span>/</span> <span class="tag">homepage</span></li>
-  <li><span>/writing</span> <span class="tag">20 posts</span></li>
+  <li><span>/writing</span> <span class="tag">21 posts</span></li>
   <li><span>/about</span> <span class="tag">static</span></li>
   <li><span>/contact</span> <span class="tag">Supabase</span></li>
   <li><span>/ask-goose</span> <span class="tag">RAG chatbot · Claude · pgvector</span></li>
@@ -83,6 +83,22 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
   <li><span>/api/chat</span> <span class="tag">streaming · Claude · pgvector · HF</span></li>
   <li><span>/api/search</span> <span class="tag">vector · Supabase · HF</span></li>
 </ul>
+
+<h2>v1.4.0 Session Notes — 2026-04-23</h2>
+<div class="notes-grid">
+  <div class="note-card">
+    <div class="note-card-title">New writing post: Grading the grader <span class="note-tag note-tag-feat">feature</span></div>
+    New post at /writing/grading-the-grader comparing qwen2.5:1.5b vs qwen2.5:7b chatbot graders across 55 Ask Goose sessions. 1000 words, 8 min read, three hand-rolled inline SVG charts (per-metric means, accuracy distribution, fallback distribution). Includes hypothetical Claude Haiku 4.5 / Sonnet 4.6 positioning with cost tiers.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Multi-grader Google Sheet <span class="note-tag note-tag-arch">arch</span></div>
+    sync-goose-sheets.py on Alienware rewritten to bucket grades by graded_by and write model-specific column blocks. Sheet now has 24 columns (qwen-1.5b *, qwen-7b *, Jose *, Notes). Backfill pass on every run fills grade cells on rows synced before their grade completed. MODELS list at top: adding Haiku/Sonnet is one line.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Grader Comparison tab + RAG refresh <span class="note-tag note-tag-feat">feature</span></div>
+    New "Grader Comparison" tab on the Google Sheet with per-metric stats, distributions, 7 findings, and hypothetical Claude positioning. Regenerated tldr.json, tags.json, related.json, and upserted 15 RAG chunks to Supabase rag_chunks so Ask Goose can cite the post.
+  </div>
+</div>
 
 <h2>v1.3.4 Session Notes — 2026-04-21</h2>
 <div class="notes-grid">
