@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.5.0 — 2026-06-25
+
+### Fixed
+- Sitemap now includes all writing posts. `app/sitemap.js` was hardcoded to 5 static pages, so Google never discovered any `/writing/*` posts (Search Console: 35 impressions / 0 clicks over 90 days). Rewrote it to import the shared `posts` array from `app/lib/posts.ts` and emit a URL per post — 26 total (5 static + 21 posts). New posts auto-appear with no manual upkeep; per-post `lastModified` uses each post's date.
+
+### Added
+- Canonical domain enforced (apex). Both apex and www were serving 200 with no redirect (duplicate-content risk). Added a www→apex 308 redirect in `next.config.ts` (host-based, path-preserving). Flipped `sitemap.js` BASE_URL and `app/robots.js` sitemap line to apex so all SEO metadata points to one canonical host.
+
+### Notes
+- Deployed via `vercel --prod`, live-verified (www 308→apex, apex 200, sitemap 26 URLs). Resubmitted sitemap in Search Console — discovered pages 5 → 26.
+- Surfaced by the new `ga-diagnostics` tool on Alienware (GA4 + Search Console puller).
+
 ## v1.4.0 — 2026-04-23
 
 ### Added

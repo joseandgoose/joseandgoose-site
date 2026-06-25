@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.joseandgoose.com/sitemap.xml',
+    sitemap: 'https://joseandgoose.com/sitemap.xml',
   }
 }
