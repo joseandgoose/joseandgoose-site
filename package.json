@@ -7,6 +7,8 @@
     "build": "next build",
     "prebuild": "tsx scripts/generate-search-index.ts",
     "generate:search": "tsx scripts/generate-search-index.ts",
+    "refresh:posts": "tsx scripts/refresh-top-posts.ts",
+    "deploy": "npm run refresh:posts && vercel --prod",
     "start": "next start",
     "lint": "eslint"
   },

@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.6.2 — 2026-07-07
+
+### Added
+- Popular-posts list now auto-refreshes from GA4. `scripts/refresh-top-posts.ts` reads `~/ga-diagnostics/ga.db` on Alienware over SSH, ranks `/writing/*` pages by total views, and writes the top 3 valid post slugs to `app/lib/top-posts.json` (imported by the homepage). Runs automatically via the new `npm run deploy` (`refresh:posts && vercel --prod`); degrades gracefully to the existing snapshot if Alienware is unreachable, so cloud builds never fail.
+
+### Chore
+- Tracked the `app/subscribe` and `app/unsubscribe` route handlers — live via the `vercel` CLI since March but never committed to git.
+
 ## v1.6.1 — 2026-07-07
 
 ### Fixed

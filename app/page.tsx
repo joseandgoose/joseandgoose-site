@@ -3,13 +3,15 @@
 import { useState, useEffect } from "react";
 import Hero from "./Hero";
 import { posts } from "./lib/posts";
+import topPosts from "./lib/top-posts.json";
 
-// Top 3 writing posts by traffic (GA4, Mar 27–Jul 7 2026): views 145 / 75 / 48.
-// Surfaced on the homepage to funnel visitors into the highest-converting content.
-const TOP_SLUGS = ["how-i-built-ask-goose", "how-i-built-this", "how-i-upgraded-search-to-vectors"];
-const TOP_POSTS = TOP_SLUGS
+// Top writing posts by GA4 traffic. app/lib/top-posts.json is regenerated at deploy
+// time by scripts/refresh-top-posts.ts (reads ~/ga-diagnostics/ga.db on Alienware).
+// Falls back to the newest posts if the snapshot's slugs don't resolve.
+const RESOLVED = topPosts.slugs
   .map((s) => posts.find((p) => p.slug === s))
   .filter((p): p is (typeof posts)[number] => Boolean(p));
+const TOP_POSTS = RESOLVED.length >= 3 ? RESOLVED.slice(0, 3) : posts.slice(0, 3);
 
 // Greeting variants
 const greetings = {
