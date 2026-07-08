@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.6.0 — 2026-07-07
+
+### Added
+- Homepage hero redesign — a split banner with a solid forest-green caption panel (left) and a cycling photo stage (right). Hovering the top nav or the "Jump to" tabs swaps the featured card (About / Work / Writing / Contact) via a diagonal image wipe; it also auto-rotates through 5 photos (default + 4 sections + a clapperboard "Goose production" slide). A 10s hold after load and a 5s hold after any hover keep it from scrolling a visitor off their selected card. About + the clapperboard slide show the time-of-day greeting.
+- "Popular posts" section on the homepage — the top 3 writing posts by real GA4 traffic (Mar 27–Jul 7: 145 / 75 / 48 views), rendered in the writing-page list format, to funnel landing traffic into the highest-performing content.
+- Hero photos routed through Next.js image optimization (`/_next/image`, resize + WebP) with decode-before-swap, eliminating the large-image decode flash.
+
+### Changed
+- "Jump to" bar restyled as folder-style tabs (uniform white, green text, full-height, stacked with seam shadows).
+- Removed the four redundant homepage tiles and the "Jose is the human" title block (their destinations already live in the nav); replaced by the hero + popular posts.
+- Footer: removed the "Made with intention" tagline and centered the copyright line.
+- Ask Goose chat bubble now lifts above the footer on scroll so it no longer overlaps the footer CTAs (site-wide).
+
+### Notes
+- Popular-posts list is a hardcoded GA4 snapshot; can be wired to auto-refresh from `~/ga-diagnostics/ga.db` on build.
+- Deployed via `vercel --prod`.
+
 ## v1.5.0 — 2026-06-25
 
 ### Fixed

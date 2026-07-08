@@ -74,8 +74,6 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="footer-bottom-wrapper">
           <span className="footer-copyright">&copy; 2026 Jose and Goose</span>
-          <span className="footer-divider">&middot;</span>
-          <span className="footer-tagline">Made with intention</span>
         </div>
       </div>
     </footer>

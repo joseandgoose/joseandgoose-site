@@ -1,6 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Hero from "./Hero";
+import { posts } from "./lib/posts";
+
+// Top 3 writing posts by traffic (GA4, Mar 27–Jul 7 2026): views 145 / 75 / 48.
+// Surfaced on the homepage to funnel visitors into the highest-converting content.
+const TOP_SLUGS = ["how-i-built-ask-goose", "how-i-built-this", "how-i-upgraded-search-to-vectors"];
+const TOP_POSTS = TOP_SLUGS
+  .map((s) => posts.find((p) => p.slug === s))
+  .filter((p): p is (typeof posts)[number] => Boolean(p));
 
 // Greeting variants
 const greetings = {
@@ -112,14 +121,7 @@ export default function Home() {
 
   return (
     <>
-
-      {/* ── PAGE TITLE BLOCK ── */}
-      <div className="page-header" id="about">
-        <h1>Jose is the human</h1>
-        <p className="tagline">And Goose is the schnauz</p>
-      </div>
-
-      {/* ── JUMP BAR ── */}
+      {/* ── JUMP-TO TABS ── */}
       <nav className="jump-bar">
         <div className="jump-inner">
           <span className="jump-label">Jump to</span>
@@ -130,73 +132,31 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* ── HERO BANNER ── */}
-      <section className="hero">
+      {/* ── PAW-TRAIL HERO ── */}
+      <Hero greeting={greeting} />
 
-        {/* LEFT: green text panel */}
-        <div className="hero-text">
-          <p className="hero-eyebrow">Product &amp; Strategy</p>
-          <h2 className="hero-title">
-            {greeting || "Building things with intention."}
-          </h2>
-          <a href="/work-and-projects" className="hero-cta">Explore Our Work</a>
+      {/* ── MOST-READ POSTS (traffic-driven, funnels visitors into top content) ── */}
+      <section className="home-popular" id="about" aria-label="Most read posts">
+        <div className="home-popular-head">
+          <p className="home-popular-eyebrow">Most read</p>
+          <h2 className="home-popular-title">Popular posts</h2>
         </div>
-
-        {/* RIGHT: image panel — replace placeholder with your photo */}
-        <div className="hero-img">
-          <img src="/hero.jpeg" alt="Jose and Goose" />
+        <div className="writing-list">
+          {TOP_POSTS.map((post) => (
+            <a href={`/writing/${post.slug}`} key={post.slug} className="writing-card">
+              <div className="writing-card-meta">
+                <span className="writing-card-date">{post.date}</span>
+                <span className="writing-card-dot">·</span>
+                <span className="writing-card-read">{post.readTime}</span>
+              </div>
+              <h3 className="writing-card-title">{post.title}</h3>
+              <p className="writing-card-subtitle">{post.subtitle}</p>
+              <span className="writing-card-link">Read post →</span>
+            </a>
+          ))}
         </div>
-      </section>
-
-      {/* ── FOUR TILES ── */}
-      <section className="tiles" id="work">
-        <div className="tiles-grid">
-
-          {/* Tile 1 — swap vis-dark with your image */}
-          <article className="tile">
-            <div className="tile-visual"><img src="/title1.jpg" alt="Product Design" /></div>
-            <p className="tile-category">Experience</p>
-            <h3 className="tile-name">Education, Finance, Strategy, and Product</h3>
-            <p className="tile-desc">Range of experiences and learning.</p>
-            <div className="tile-actions">
-              <a href="/work-and-projects" className="btn btn-outline">Experience</a>
-            </div>
-          </article>
-
-          {/* Tile 2 */}
-          <article className="tile">
-            <div className="tile-visual"><img src="/title2.jpg" alt="Writing" /></div>
-            <p className="tile-category">Writing</p>
-            <h3 className="tile-name">Projects and Research</h3>
-            <p className="tile-desc">See what we're working on!</p>
-            <div className="tile-actions">
-              <a href="/writing" className="btn btn-fill">Read Essays</a>
-              {/* <a href="#" className="btn btn-outline">Subscribe</a> */}
-            </div>
-          </article>
-
-          {/* Tile 3 */}
-          <article className="tile">
-            <div className="tile-visual"><img src="/title3.jpg" alt="Talks" /></div>
-            <p className="tile-category">Get in touch</p>
-            <h3 className="tile-name">Contact</h3>
-            <p className="tile-desc">What questions do you have?</p>
-            <div className="tile-actions">
-              <a href="/contact" className="btn btn-outline">Contact</a>
-            </div>
-          </article>
-
-          {/* Tile 4 */}
-          <article className="tile">
-            <div className="tile-visual"><img src="/title4.jpg" alt="About" /></div>
-            <p className="tile-category">About</p>
-            <h3 className="tile-name">Who We Are</h3>
-            <p className="tile-desc">Where we started.</p>
-            <div className="tile-actions">
-              <a href="/about" className="btn btn-fill">Our Story</a>
-            </div>
-          </article>
-
+        <div className="home-popular-all">
+          <a href="/writing" className="writing-card-link">See all writing →</a>
         </div>
       </section>
     </>

@@ -215,8 +215,8 @@ header {
    JUMP BAR
 ════════════════════════════════════════ */
 .jump-bar {
-  border-bottom: 1px solid var(--rule);
-  background: var(--white);
+  background: var(--cream);          /* match body so there's no hairline at the hero's top edge */
+  overflow: hidden;
 }
 
 .jump-inner {
@@ -224,7 +224,7 @@ header {
   margin: 0 auto;
   padding: 0 48px;
   display: flex;
-  align-items: center;
+  align-items: stretch;              /* tabs fill the full bar height */
   height: 48px;
 }
 
@@ -234,37 +234,50 @@ header {
   font-weight: 400;
   letter-spacing: 0.06em;
   color: var(--stone);
-  margin-right: 20px;
+  margin-right: 16px;
   white-space: nowrap;
+  align-self: center;
 }
 
+/* Folder-style tabs — uniform white background, green text, rectangular, full height; depth from seam shadows */
 .jump-inner a {
+  position: relative;
   font-family: var(--sans);
   font-size: 0.78rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--forest);
   text-decoration: none;
-  padding: 0 14px;
   height: 100%;
+  padding: 0 24px;
   display: flex;
   align-items: center;
-  border-right: 1px solid var(--rule);
-  transition: background 0.15s;
   white-space: nowrap;
-}
-
-.jump-inner a:first-of-type {
-  border-left: 1px solid var(--rule);
-}
-
-.jump-inner a:hover {
-  background: var(--forest-pale);
-}
-
-.jump-bar {
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
   background: var(--white);
+  border: 1px solid var(--rule);
+  border-bottom: none;
+  margin-left: -1px;                 /* share the divider, like stacked tabs */
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.16s ease, color 0.16s ease;
+}
+
+.jump-inner a:first-of-type { margin-left: 0; }
+
+/* leftmost tab stacks on top */
+.jump-inner a:nth-of-type(1) { z-index: 4; }
+.jump-inner a:nth-of-type(2) { z-index: 3; }
+.jump-inner a:nth-of-type(3) { z-index: 2; }
+.jump-inner a:nth-of-type(4) { z-index: 1; }
+
+.jump-inner a:hover,
+.jump-inner a:focus-visible {
+  color: #16301f;                    /* deeper green text only — no background tint */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.14);
+  z-index: 10;
+}
+
+.jump-inner a:focus-visible {
+  outline: 2px solid var(--mustard);
+  outline-offset: -2px;
 }
 
 /* ═══════════════════════════════════════
@@ -673,8 +686,8 @@ header {
 }
 
 .footer-bottom-wrapper {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
   font-family: var(--sans);
   font-size: 0.72rem;
@@ -684,8 +697,8 @@ header {
 }
 
 .footer-copyright {
-  text-align: right;
-  padding-right: 12px;
+  text-align: center;
+  padding-right: 0;
 }
 
 .footer-divider {
@@ -3139,4 +3152,43 @@ footer:not(.universal-footer) {
     max-height: -webkit-fill-available;
     border-radius: 0;
   }
+}
+/* ═══════════════════════════════════════
+   HOMEPAGE — MOST-READ POSTS
+════════════════════════════════════════ */
+.home-popular {
+  background: var(--cream);
+  padding-top: 56px;
+}
+.home-popular-head {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px 22px;
+}
+.home-popular-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 10px;
+}
+.home-popular-title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.home-popular .writing-list {
+  padding-bottom: 20px;
+}
+.home-popular-all {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+.home-popular-all .writing-card-link {
+  font-weight: 500;
 }

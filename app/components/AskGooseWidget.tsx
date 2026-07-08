@@ -129,6 +129,25 @@ export default function AskGooseWidget() {
     };
   }, [open]);
 
+  // Lift the floating trigger above the footer so it never overlaps the footer CTAs.
+  useEffect(() => {
+    function update() {
+      const btn = document.querySelector(".goose-widget-trigger") as HTMLElement | null;
+      if (!btn) return;
+      const base = window.innerWidth <= 600 ? 16 : 24;
+      const footer = document.querySelector("footer.universal-footer") as HTMLElement | null;
+      const overlap = footer ? window.innerHeight - footer.getBoundingClientRect().top : 0;
+      btn.style.bottom = overlap > 0 ? `${overlap + 16}px` : `${base}px`;
+    }
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, [open]);
+
   async function handleSend(text?: string) {
     const question = text || input.trim();
     if (!question || isStreaming || isLimitReached) return;
