@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About — Jose and Goose",
+  description:
+    "Product & strategy by background (marketplaces, fintech, Goldman), obsessed with building with AI. And Goose, the schnauzer who supervises.",
+};
+
 export default function About() {
   return (
     <>

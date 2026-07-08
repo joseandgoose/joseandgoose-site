@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.6.3 — 2026-07-07
+
+### Changed
+- SEO — unique title + meta description per page. `/`, `/writing`, `/about`, `/work-and-projects`, and `/contact` all inherited the same generic title ("Jose and Goose") and description, so search results were indistinguishable and un-clickable. Each now has its own descriptive, CTR-oriented snippet (descriptions kept ≤ ~155 chars). Posts were already unique. `/work-and-projects` was a client component (can't export metadata), so it was split into a server `page.tsx` that renders the existing UI as `WorkClient.tsx`.
+- Replaced the overused "made with intention" site tagline with a plainspoken description: "I build things with AI and write down exactly how — chatbots, search, and automations. Goose is the schnauzer."
+
 ## v1.6.2 — 2026-07-07
 
 ### Added

@@ -27,8 +27,9 @@ const pressStart2P = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
-  title: "Jose and Goose",
-  description: "Celebrating the craft of things made with intention.",
+  title: "Jose and Goose — building with AI, one project at a time",
+  description:
+    "I build things with AI and write down exactly how — chatbots, search, and automations. Goose is the schnauzer.",
 };
 
 export default function RootLayout({
