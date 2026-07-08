@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.6.1 — 2026-07-07
+
+### Fixed
+- Hero images failed to load in production (Vercel image optimizer returned `400 INVALID_IMAGE_OPTIMIZE_REQUEST`). Next 16 / Vercel only allows the default quality of `75` unless `images.qualities` is configured; the hero optimizer URL requested `q=70`. Changed to `q=75`. (Local dev accepted `q=70`, so it only surfaced on the production deploy.)
+
 ## v1.6.0 — 2026-07-07
 
 ### Added

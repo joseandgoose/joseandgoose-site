@@ -25,8 +25,9 @@ const HREF_TO_KEY: Record<string, Key> = {
 };
 
 // Route photos through Next's image optimizer (resize + WebP) so the large originals
-// don't cause a decode flash on swap.
-const opt = (src: string) => `/_next/image?url=${encodeURIComponent(src)}&w=1920&q=70`;
+// don't cause a decode flash on swap. q must be 75 — Vercel/Next 16 rejects other
+// quality values (400 INVALID_IMAGE_OPTIMIZE_REQUEST) unless images.qualities is configured.
+const opt = (src: string) => `/_next/image?url=${encodeURIComponent(src)}&w=1920&q=75`;
 
 export default function Hero({ greeting }: { greeting?: string }) {
   const stageRef = useRef<HTMLDivElement>(null);
