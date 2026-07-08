@@ -27,9 +27,23 @@ const pressStart2P = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://joseandgoose.com"),
   title: "Jose and Goose — building with AI, one project at a time",
   description:
     "I build things with AI and write down exactly how — chatbots, search, and automations. Goose is the schnauzer.",
+  openGraph: {
+    siteName: "Jose and Goose",
+    type: "website",
+    locale: "en_US",
+    url: "https://joseandgoose.com",
+    images: [
+      { url: "/og.png", width: 1200, height: 630, alt: "Jose and Goose — building with AI, one project at a time" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({

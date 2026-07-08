@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.6.4 — 2026-07-07
+
+### Added
+- Open Graph + Twitter card metadata, site-wide. Added `metadataBase`, `openGraph` (siteName, type, locale, url, image), and `twitter` (`summary_large_image`) to `app/layout.tsx`. Next auto-derives a correct per-page `og:title`/`og:description` from each page's own title/description — so all 5 top pages **and** all 22 posts get proper cards with no per-file edits — plus a shared branded share image (`public/og.png`, 1200×630, rendered from a Cormorant/Raleway card). Links shared on X, LinkedIn, Slack, and iMessage now render a rich preview instead of a bare URL.
+
 ## v1.6.3 — 2026-07-07
 
 ### Changed
