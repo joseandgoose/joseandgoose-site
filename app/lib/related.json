@@ -1,12 +1,52 @@
 {
-  "how-i-built-market-daily": [
+  "how-i-self-healed-schwab-oauth": [
+    {
+      "slug": "how-i-built-market-daily",
+      "title": "How I Built a Market Briefing That Writes and Sends Itself Every Morning"
+    },
+    {
+      "slug": "how-i-built-cron-ops",
+      "title": "How I Built a Cron-Powered Operations Layer on a Home Linux Server"
+    }
+  ],
+  "what-claude-code-actually-costs-me": [
+    {
+      "slug": "how-i-built-cron-ops",
+      "title": "How I Built a Cron-Powered Operations Layer on a Home Linux Server"
+    },
+    {
+      "slug": "how-i-automated-trophymanager",
+      "title": "How I Automated My Soccer Club with a Bot"
+    }
+  ],
+  "how-i-self-hosted-gmail-mcp": [
+    {
+      "slug": "how-i-self-healed-schwab-oauth",
+      "title": "How I Self-Healed Schwab's 7-Day OAuth Expiry"
+    },
     {
       "slug": "how-i-automated-garmin-recaps",
       "title": "How I Automated Daily Garmin Recaps to My Inbox"
-    },
+    }
+  ],
+  "how-i-built-self-hosted-push-alerts": [
     {
       "slug": "how-i-built-server-alerts",
       "title": "How I Built a Full Status Alert System"
+    },
+    {
+      "slug": "how-i-self-healed-schwab-oauth",
+      "title": "How I Self-Healed Schwab's 7-Day OAuth Expiry"
+    }
+  ],
+  "grading-the-grader": [
+    {
+      "slug": "how-i-built-ask-goose",
+      "title": "How I Built Ask Goose, a RAG Chatbot for My Personal Site"
+    },
+    {
+      "slug": "how-i-automated-trophymanager",
+      "title": "How I Automated My Soccer Club with a Bot"
     }
   ],
   "how-i-built-fruit-exchange": [
@@ -19,6 +59,16 @@
       "title": "How I Built JoseAndGoose.com Using Claude"
     }
   ],
+  "how-i-built-market-daily": [
+    {
+      "slug": "how-i-automated-garmin-recaps",
+      "title": "How I Automated Daily Garmin Recaps to My Inbox"
+    },
+    {
+      "slug": "how-i-self-healed-schwab-oauth",
+      "title": "How I Self-Healed Schwab's 7-Day OAuth Expiry"
+    }
+  ],
   "how-i-automated-trophymanager": [
     {
       "slug": "how-i-built-cron-ops",
@@ -27,16 +77,6 @@
     {
       "slug": "how-i-built-this",
       "title": "How I Built JoseAndGoose.com Using Claude"
-    }
-  ],
-  "how-i-setup-headless-linux": [
-    {
-      "slug": "how-i-built-api-server",
-      "title": "How I Built a Personal API Server to Control Everything Remotely"
-    },
-    {
-      "slug": "how-i-secured-linux-server",
-      "title": "How I Secured the Home Linux Server"
     }
   ],
   "how-i-built-tldr": [
@@ -49,6 +89,16 @@
       "title": "How I Built Ask Goose, a RAG Chatbot for My Personal Site"
     }
   ],
+  "how-i-setup-headless-linux": [
+    {
+      "slug": "how-i-built-api-server",
+      "title": "How I Built a Personal API Server to Control Everything Remotely"
+    },
+    {
+      "slug": "how-i-secured-linux-server",
+      "title": "How I Secured the Home Linux Server"
+    }
+  ],
   "how-i-secured-linux-server": [
     {
       "slug": "how-i-built-api-server",
@@ -57,6 +107,16 @@
     {
       "slug": "how-i-setup-headless-linux",
       "title": "How I Turned an Old Laptop Into a Headless Linux Server"
+    }
+  ],
+  "how-i-built-greetings": [
+    {
+      "slug": "how-i-built-content-pipeline",
+      "title": "How I Built an AI Content Pipeline for Every Writing Post"
+    },
+    {
+      "slug": "how-i-built-tldr",
+      "title": "How I Added \"TL;DR by Goose\" AI Summaries to Every Post"
     }
   ],
   "how-i-replaced-google-forms": [
@@ -69,16 +129,6 @@
       "title": "How I Built 50+ Dynamic Greetings Using Claude Code"
     }
   ],
-  "how-i-built-greetings": [
-    {
-      "slug": "how-i-built-content-pipeline",
-      "title": "How I Built an AI Content Pipeline for Every Writing Post"
-    },
-    {
-      "slug": "how-i-built-ask-goose",
-      "title": "How I Built Ask Goose, a RAG Chatbot for My Personal Site"
-    }
-  ],
   "how-i-automated-garmin-recaps": [
     {
       "slug": "how-i-built-market-daily",
@@ -89,14 +139,14 @@
       "title": "How I Built a Full Status Alert System"
     }
   ],
-  "how-i-built-server-alerts": [
+  "how-i-built-this": [
     {
-      "slug": "how-i-built-cron-ops",
-      "title": "How I Built a Cron-Powered Operations Layer on a Home Linux Server"
+      "slug": "gemini-grades",
+      "title": "Gemini Grades the Website Build Difficulty"
     },
     {
-      "slug": "how-i-automated-garmin-recaps",
-      "title": "How I Automated Daily Garmin Recaps to My Inbox"
+      "slug": "how-i-built-footer",
+      "title": "How I Built a Universal Footer Using Claude Code"
     }
   ],
   "how-i-built-search": [
@@ -109,24 +159,14 @@
       "title": "How I Upgraded Search to Semantic Vector Embeddings"
     }
   ],
-  "how-i-built-footer": [
+  "how-i-run-parallel-claude-code-sessions": [
+    {
+      "slug": "how-i-built-cron-ops",
+      "title": "How I Built a Cron-Powered Operations Layer on a Home Linux Server"
+    },
     {
       "slug": "how-i-built-this",
       "title": "How I Built JoseAndGoose.com Using Claude"
-    },
-    {
-      "slug": "how-i-built-numerator",
-      "title": "How I Built Numerator Using Claude"
-    }
-  ],
-  "how-i-built-api-server": [
-    {
-      "slug": "how-i-setup-headless-linux",
-      "title": "How I Turned an Old Laptop Into a Headless Linux Server"
-    },
-    {
-      "slug": "how-i-secured-linux-server",
-      "title": "How I Secured the Home Linux Server"
     }
   ],
   "how-i-built-cron-ops": [
@@ -149,6 +189,36 @@
       "title": "How I Built Numerator Using Claude"
     }
   ],
+  "how-i-built-content-pipeline": [
+    {
+      "slug": "how-i-built-ask-goose",
+      "title": "How I Built Ask Goose, a RAG Chatbot for My Personal Site"
+    },
+    {
+      "slug": "how-i-built-tldr",
+      "title": "How I Added \"TL;DR by Goose\" AI Summaries to Every Post"
+    }
+  ],
+  "how-i-built-api-server": [
+    {
+      "slug": "how-i-setup-headless-linux",
+      "title": "How I Turned an Old Laptop Into a Headless Linux Server"
+    },
+    {
+      "slug": "how-i-secured-linux-server",
+      "title": "How I Secured the Home Linux Server"
+    }
+  ],
+  "how-i-built-server-alerts": [
+    {
+      "slug": "how-i-built-cron-ops",
+      "title": "How I Built a Cron-Powered Operations Layer on a Home Linux Server"
+    },
+    {
+      "slug": "how-i-automated-garmin-recaps",
+      "title": "How I Automated Daily Garmin Recaps to My Inbox"
+    }
+  ],
   "how-i-built-ask-goose": [
     {
       "slug": "how-i-built-content-pipeline",
@@ -159,24 +229,14 @@
       "title": "How I Upgraded Search to Semantic Vector Embeddings"
     }
   ],
-  "how-i-built-this": [
+  "how-i-built-footer": [
     {
-      "slug": "gemini-grades",
-      "title": "Gemini Grades the Website Build Difficulty"
+      "slug": "how-i-built-this",
+      "title": "How I Built JoseAndGoose.com Using Claude"
     },
     {
-      "slug": "how-i-built-footer",
-      "title": "How I Built a Universal Footer Using Claude Code"
-    }
-  ],
-  "how-i-built-content-pipeline": [
-    {
-      "slug": "how-i-built-ask-goose",
-      "title": "How I Built Ask Goose, a RAG Chatbot for My Personal Site"
-    },
-    {
-      "slug": "how-i-built-tldr",
-      "title": "How I Added \"TL;DR by Goose\" AI Summaries to Every Post"
+      "slug": "how-i-built-numerator",
+      "title": "How I Built Numerator Using Claude"
     }
   ],
   "how-i-upgraded-search-to-vectors": [

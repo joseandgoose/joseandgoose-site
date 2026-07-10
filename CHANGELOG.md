@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.7.0 — 2026-07-09
+
+### Added
+- Five new writing posts, dated May 8–Jul 9 2026 to fill the gap after the Apr 23 post: "How I Built Self-Hosted Push Alerts to My Phone" (ntfy/Tailscale), "How I Self-Healed Schwab's 7-Day OAuth Expiry", "How I Self-Hosted a Gmail MCP Server", "How I Run Multiple Claude Code Sessions in Parallel" (cmux), and "What Claude Code Actually Costs Me". Recipe format, grounded in real source + chat transcripts, and security-audited for leaks (IPs, hostnames, tokens, credential paths) before publish.
+- Three brand-styled inline SVG diagrams built into the existing `.post-visual` figure convention: billing lanes (cost post), worktree fan-out (cmux), and the ntfy→Tailscale→phone alert pipeline (push post).
+- TL;DR summaries, Related Posts, search index, and vector embeddings regenerated for all five posts.
+
+### Changed
+- Post-body links now render underlined + forest-green site-wide via a new `.post-body a` rule. Previously only bold-list-item links were styled, so paragraph links (e.g. the Schwab solution links) looked like plain text.
+- Gmail MCP post: corrected "read-only" → "read-and-draft" (validated against Anthropic's Google Workspace connector docs), and hoisted the agent-inbox-deletion risk (the OpenClaw / Summer Yue incident) into the intro and TL;DR with PCMag + TechCrunch links.
+- Schwab post: merged "The Hard Part" and "A Spectrum of Solutions" into one tighter section with bulleted solution tiers and external link-outs (schwab-py, Schwab-API-OAuth-Manager, schwab-api-auth-automation, community gist, Schwab OAuth guide).
+- cmux post: linked the r/ClaudeCode introduction thread. Cost post: elevated the Anthropic $100/mo API-credit-cap trigger into the intro.
+
 ## v1.6.4 — 2026-07-07
 
 ### Added

@@ -1889,6 +1889,21 @@ footer:not(.universal-footer) {
   font-weight: 500;
 }
 
+.post-body a {
+  color: var(--forest);
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(38, 70, 53, 0.45);
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+.post-body a:hover {
+  color: var(--forest-mid);
+  text-decoration-color: var(--forest);
+}
+
 .post-body ul li strong a {
   color: var(--forest);
   text-decoration: none;

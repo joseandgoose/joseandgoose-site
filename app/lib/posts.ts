@@ -9,6 +9,51 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "what-claude-code-actually-costs-me",
+    title: "What Claude Code Actually Costs Me",
+    subtitle:
+      "I had a dozen automated jobs quietly calling Claude and no idea what any of it cost, so I built a weekly audit that inventories every AI-calling job, splits real dollars from subscription load, and flags any new job that sneaks in. The answer: real spend is under $2 a month.",
+    date: "July 9, 2026",
+    readTime: "7 min read",
+    tags: ["AI Tools", "Automation", "Product Thinking", "DevOps"],
+  },
+  {
+    slug: "how-i-run-parallel-claude-code-sessions",
+    title: "How I Run Multiple Claude Code Sessions in Parallel",
+    subtitle:
+      "Running several Claude Code agents at once with git worktrees and a small shell tool called cmux — one agent per branch, no file conflicts, on both my Mac and my home Linux server, all on a single Max subscription",
+    date: "June 26, 2026",
+    readTime: "7 min read",
+    tags: ["AI Tools", "Automation", "DevOps"],
+  },
+  {
+    slug: "how-i-self-hosted-gmail-mcp",
+    title: "How I Self-Hosted a Gmail MCP Server",
+    subtitle:
+      "The claude.ai Gmail connector can read and draft but can't archive, label, or trash. I built a self-hosted MCP server with modify scope so Claude can clean up my inbox — safely — plus the 7-day OAuth bug that took a month to understand",
+    date: "June 12, 2026",
+    readTime: "7 min read",
+    tags: ["AI Tools", "Automation", "Backend", "Security"],
+  },
+  {
+    slug: "how-i-self-healed-schwab-oauth",
+    title: "How I Self-Healed Schwab's 7-Day OAuth Expiry",
+    subtitle:
+      "Schwab's market-data API hands you a token that hard-expires every 7 days by design. Instead of babysitting a renewal, I built a pipeline that renews itself before it dies and only emails me when it can't",
+    date: "May 22, 2026",
+    readTime: "7 min read",
+    tags: ["Automation", "Backend", "API Design", "DevOps"],
+  },
+  {
+    slug: "how-i-built-self-hosted-push-alerts",
+    title: "How I Built Self-Hosted Push Alerts to My Phone",
+    subtitle:
+      "Replacing buried email alerts with instant phone push notifications using self-hosted ntfy, kept private to my own devices over Tailscale with token auth — no third-party push service",
+    date: "May 8, 2026",
+    readTime: "7 min read",
+    tags: ["Automation", "Backend", "Security", "DevOps", "Linux"],
+  },
+  {
     slug: "grading-the-grader",
     title: "Grading the grader: qwen 1.5b vs 7b",
     subtitle: "I swapped the local AI that grades my chatbot for a bigger one and compared the two across 55 real conversations. Here's what a smaller model misses — and where Claude Haiku and Sonnet would sit on the same ladder.",
