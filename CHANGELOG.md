@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.7.1 — 2026-07-17
+
+### Changed
+- Rewrote all 50 homepage hero greetings (`app/page.tsx`) in a warmer, first-person "explorer recounting their day" voice inspired by The Martian's Mark Watney — dropping the clipped `Fragment. Fragment. Fragment.` cadence and the product-name plugs (myperfectpet, Bocce's). Each greeting now opens with a natural time cue so first-time visitors understand it's time-of-day aware, refers to Goose by name (no more third-person "the schnauzer"), and reads conversationally to a stranger without in-jokey slang. Added city-biking activities (coffee shop, co-work run, groceries, city rides) alongside the existing running/beach/hiking references, matching the car-light lifestyle.
+
 ## v1.7.0 — 2026-07-09
 
 ### Added
