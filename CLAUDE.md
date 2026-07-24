@@ -15,8 +15,14 @@ When adding a new post or page:
 3. Run `npx tsx scripts/generate-embeddings.ts` to update vector search embeddings
 
 ## Deployment
-- Hosted on Vercel — deploy with `vercel` CLI from this folder
-- Do NOT use `git pull` — remote is a starter/archive, local history is authoritative
+- Hosted on Vercel, deployed from GitHub via git-integration — **pushing to `main` deploys**
+- `origin/main` is the source of truth. Pull before starting; the old
+  "never pull, the remote is an archive" rule is obsolete (it referred to the
+  renamed `joseandgoose/starter` repo and would now cause divergence)
+- Build is pinned to **Node 20** — Node 24 can't compile the `sharp` bundled in
+  `@xenova/transformers`. Deprecated for builds after 2026-10-01; upgrade that dep
+- All env vars the app reads must exist in the **Vercel project env**, not just
+  `.env.local` — cloud builds can't see this machine. Scope secrets to Preview too
 
 ## Secrets
 - All credentials in `.env.local` via `process.env.*` — never hardcode

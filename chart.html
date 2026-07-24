@@ -60,13 +60,13 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
 <body>
 
 <h1>joseandgoose.com</h1>
-<div class="subtitle">Personal site — Next.js 16 + TypeScript + Tailwind CSS 4 — deployed on Vercel — v1.7.1 — 2026-07-17</div>
+<div class="subtitle">Personal site — Next.js 16 + TypeScript + Tailwind CSS 4 — deployed on Vercel — v1.8.0 — 2026-07-23</div>
 
 <div class="summary-grid">
   <div class="summary-box"><div class="val">21</div><div class="lbl">Writing Posts</div></div>
   <div class="summary-box"><div class="val">4</div><div class="lbl">Features</div></div>
   <div class="summary-box"><div class="val">12</div><div class="lbl">API Routes</div></div>
-  <div class="summary-box"><div class="val">v1.7.1</div><div class="lbl">Version</div></div>
+  <div class="summary-box"><div class="val">v1.8.0</div><div class="lbl">Version</div></div>
 </div>
 
 <h2>Pages &amp; Features</h2>
@@ -82,7 +82,28 @@ h2 { font-size: 1rem; font-weight: 600; color: var(--text-muted); margin: 32px 0
   <li><span>/subscribe · /unsubscribe</span> <span class="tag">market daily · Supabase</span></li>
   <li><span>/api/chat</span> <span class="tag">streaming · Claude · pgvector · HF</span></li>
   <li><span>/api/search</span> <span class="tag">vector · Supabase · HF</span></li>
+  <li><span>/parking</span> <span class="tag">passphrase · sidewalk-watch twin · 2D/3D</span></li>
 </ul>
+
+<h2>v1.8.0 Session Notes — 2026-07-23</h2>
+<div class="notes-grid">
+  <div class="note-card">
+    <div class="note-card-title">Passphrase-gated /parking page <span class="note-tag note-tag-feat">feature</span></div>
+    A page friends can open to see whether there's parking on the block before driving over. The Mac Studio pushes occupancy every 30s to /api/parking/ingest (shared push key) into a single Supabase parking_state row; /parking reads it back through a passphrase-gated /api/parking, with the passphrase sent in a request header rather than the URL. noindex. Only occupancy counts ever leave the house — no video, plates, or faces. Chosen as a push model over a tunnel specifically so nothing on the Studio is network-reachable.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Lazy 2D/3D toggle <span class="note-tag note-tag-feat">feature</span></div>
+    2D is the instant default at ~120KB; the 3D scene stays completely unloaded until tapped (~24MB of three.js, twin modules, models and textures) so the common case — someone checking spots on cell data — stays fast. Both views are vendored byte-identical from the Sidewalk Watch dashboard at the same absolute paths (/twin3d, /vendor, /assets), so the public page can't drift from the local one. A fetch shim feeds the scene geometry and occupancy from page state and returns an empty /api/live, keeping live vehicle and pedestrian tracks unpublished.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">3D ground rendered black — missing HDRI + textures <span class="note-tag note-tag-fix">fix</span></div>
+    The first 3D deploy showed near-black road and lawn. Cause: lighting.js loads /assets/venice_sunset_1k.hdr as scene.environment and the ground/grass modules pull /assets/textures/road and /grass — the asset copy had only caught .js and .glb, so PBR surfaces had no environment map or albedo. Buildings and hedges use simpler materials and still looked correct, which disguised it as a lighting problem. Source textures were 2048px near-lossless (46MB); resampled to 1024px q80 (4.7MB) since they render on a small embedded canvas.
+  </div>
+  <div class="note-card">
+    <div class="note-card-title">Vercel git-integration restored; Node 20 pin <span class="note-tag note-tag-arch">infra</span></div>
+    Deploys had been CLI-only for a reason nobody had noticed: the project was still linked to joseandgoose/starter, a repo since renamed to joseandgoose-site, so the Git link 404'd and Vercel quietly fell back to vercel --prod. Reconnected. Cloud builds then exposed two latent gaps — the project env had never held the full set the app reads (it lived only in the Air's .env.local), and ANTHROPIC_API_KEY / HF_TOKEN were Production-scoped, which breaks Preview builds. Build also pinned to Node 20, since Vercel's new Node 24 image can't compile the old sharp inside @xenova/transformers.
+  </div>
+</div>
 
 <h2>v1.7.1 Session Notes — 2026-07-17</h2>
 <div class="notes-grid">

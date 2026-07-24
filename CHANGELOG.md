@@ -1,5 +1,43 @@
 # Changelog
 
+## v1.8.0 — 2026-07-23
+
+### Added
+- **Passphrase-gated `/parking` page** showing live parking on the block, for
+  sending to friends. The Studio pushes occupancy to `/api/parking/ingest`
+  (push-key auth) into a single Supabase `parking_state` row; the page reads it
+  back through a passphrase-gated `/api/parking` (passphrase travels in a header,
+  never the URL). `noindex`. Occupancy only — no video, plates, or faces leave
+  the house.
+- **2D/3D toggle.** 2D is the instant default (~120KB); the 3D scene lazy-loads
+  only when tapped (~24MB). Both are vendored byte-identical from the Sidewalk
+  Watch dashboard at the same absolute paths, so the public view can't drift.
+
+### Fixed
+- 3D ground/road rendered near-black: `lighting.js` loads
+  `/assets/venice_sunset_1k.hdr` as `scene.environment` and the ground/grass
+  modules pull `/assets/textures/{road,grass}/` — none had been copied, so PBR
+  surfaces had no env map or albedo. Buildings and hedges still looked fine,
+  which made it read as a lighting bug rather than a missing asset. Textures
+  resampled 2048px -> 1024px q80 (46MB -> 4.7MB) since they render on a small
+  embedded canvas.
+- Headline read "0 of 7 open", which scans as a contradiction beside a visibly
+  full street; at zero it now reads "Full - all N taken".
+
+### Changed
+- Vercel deploys now run from GitHub (git-integration). The project had been
+  linked to `joseandgoose/starter`, a repo since renamed to `joseandgoose-site`
+  — that dead link ("Project Link not found") is why deploys had silently fallen
+  back to the `vercel --prod` CLI. Reconnected to the correct repo.
+- Vercel project env populated with the full set the app reads (it had only ever
+  lived in the Air's `.env.local`, which cloud builds can't see).
+  `ANTHROPIC_API_KEY` and `HF_TOKEN` were Production-scoped only, which silently
+  breaks Preview builds — both now cover Preview too.
+- Build pinned to **Node 20**: Vercel's default image moved to Node 24, where the
+  `sharp` bundled inside `@xenova/transformers` has no prebuilt binary and fails
+  to compile (`vips/vips8` missing). Note Node 20 is deprecated for builds after
+  2026-10-01 — the durable fix is upgrading `@xenova/transformers`.
+
 ## v1.7.1 — 2026-07-17
 
 ### Changed
