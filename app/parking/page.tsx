@@ -267,8 +267,10 @@ export default function ParkingPage() {
         <div style={styles.header}>
           <div>
             <div style={styles.big}>
-              {pending ? "…" : open}
-              <span style={styles.bigUnit}>{pending ? "" : ` of ${total} open`}</span>
+              {pending ? "…" : open === 0 ? "Full" : open}
+              <span style={styles.bigUnit}>
+                {pending ? "" : open === 0 ? ` · all ${total} taken` : ` of ${total} open`}
+              </span>
             </div>
             <div style={styles.sub}>
               {pending
